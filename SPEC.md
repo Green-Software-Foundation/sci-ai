@@ -51,7 +51,7 @@ The standard will also be applicable to emerging AI technologies such as:
 ISO/IEC 21031:2024 – Information technology — Software Carbon Intensity (SCI) specification
 
 
-##  Terms an Definitions
+##  Terms and Definitions
 
 For the purposes of this document, the following terms and definitions apply.
 
