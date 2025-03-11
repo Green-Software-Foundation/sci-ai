@@ -6,7 +6,7 @@
 > TODO
 
 - Why does this specification exist?
-- What is it's intended purpose?
+- What is its intended purpose?
 - How this aligns and differs with the overall SCI specifcations (aka we are diving into some aspects of defining R for the area of AI)
 
 ## Scope
