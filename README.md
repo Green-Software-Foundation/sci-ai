@@ -14,7 +14,8 @@ We will develop a methodology for calculating the carbon emissions rate (SCI sco
 
 The project is led by:
 
-* [Navveen Balani (Accenture)](https://github.com/navveenb)
+* [Navveen Balani (Accenture) @navveenb
+* [Henry Richards (WattTime) @Henry-WattTime
 
 ## Status
 
