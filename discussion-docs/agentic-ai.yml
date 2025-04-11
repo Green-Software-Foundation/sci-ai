@@ -1,0 +1,213 @@
+name: agentic-ai
+description: sketch for agentic ai measurement
+tags:
+aggregation:
+  metrics:
+    - sci
+  type: both
+initialize:
+  plugins:
+    sci:
+      method: Sci
+      path: "builtin"
+      config:
+        functional-unit: requests
+    energy-to-carbon:
+      method: Multiply
+      path: "builtin"
+      config:
+        input-parameters: ["energy", "grid-intensity"]
+        output-parameter: "carbon"
+tree:
+  children:
+    coordinator-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00 2025-04-11T00:00
+              duration: 3600
+              energy: 1000
+              grid-intensity: 350
+              requests: 10000
+
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 25000
+              requests: 10000
+
+    summarization-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 750
+              grid-intensity: 350
+              requests: 10000
+              
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 15000
+              requests: 10000
+
+    retrieval-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 400
+              grid-intensity: 350
+              requests: 10000
+
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 10000
+              requests: 10000
+
+    code-execution-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 600
+              grid-intensity: 350
+              requests: 10000
+
+        embodied:
+          pipeline:
+            compute:
+             - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 9000
+              requests: 10000
+
+    external-llm-api:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 5500
+              grid-intensity: 350
+              requests: 10000
+
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 30000
+              requests: 10000
+
+    mcp-server:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 20000
+              grid-intensity: 350
+              requests: 10000
+
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 6000
+              requests: 10000
+
+    external-apis:
+      children:
+        external-api-1:
+          children:
+            operational:
+              pipeline:
+                compute:
+                  - energy-to-carbon
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  energy: 600
+                  grid-intensity: 350
+                  requests: 10000
+
+            embodied:
+              pipeline:
+                compute:
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  carbon: 3000
+                  requests: 10000
+        external-api-2:
+          children:
+            operational:
+              pipeline:
+                compute:
+                  - energy-to-carbon
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  energy: 250
+                  grid-intensity: 350
+                  requests: 10000    
+            embodied:
+              pipeline:
+                compute:
+                 - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  carbon: 2500
+                  requests: 10000
