@@ -1,6 +1,7 @@
 name: agentic-ai
 description: sketch for agentic ai measurement
 tags: null
+explain: false
 aggregation:
   metrics:
     - sci
