@@ -147,7 +147,7 @@ These insights enable meaningful target-setting. If you've just finished trainin
 
 #### How are training emissions handled in the specification?
 
-Training emissions are included in the Provider SCI calculation only as direct emissions. This is because:
+Training emissions are included in the Provider SCI calculation only. This is because:
 
 1. Training is part of the Model Training lifecycle stage, which is assigned to the Provider boundary
 2. Providers have direct control over training methodologies, hardware selection, and efficiency optimizations
@@ -168,7 +168,8 @@ We decided not to include training emissions in the Consumer SCI calculation for
 3. **Measurement Simplicity**: Separating training from inference creates more straightforward measurement methodologies
 4. **Incentive Clarity**: It focuses Consumer attention on what they can control - the efficiency of runtime operations
 
-This doesn't mean training emissions are ignored - they're captured in the Provider SCI score, which Consumers can consider when selecting AI systems alongside the Consumer SCI score.
+> [!IMPORTANT] 
+> This doesn't mean training emissions are ignored - they're captured in the Provider SCI score, which Consumers can consider when selecting AI systems alongside the Consumer SCI score.
 
 ### Lifecycle Coverage
 
@@ -204,7 +205,7 @@ Uniquely, SCI for AI:
 - Includes clear IP rights statements
 - Provides specific guidance for both open-source and proprietary models
 - Covers all lifecycle stages (unlike EcoLogits and Energy Score which focus primarily on inference)
-- Unlike Green AI Index it does not allow market-based reporting (energy offsets), maintaining consistency with the core SCI specification's focus on location-based, operational efficiency improvements
+- Unlike Green AI Index it does **not allow** market-based reporting (energy offsets), maintaining consistency with the core SCI specification's focus on location-based, operational efficiency improvements
 
 #### What are the key limitations of existing metrics that SCI for AI addresses?
 
