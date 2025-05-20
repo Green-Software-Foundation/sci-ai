@@ -218,19 +218,19 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 **Boundary**: Runtime Operations (inference services, API infrastructure, monitoring systems)
 
 **Calculation Method**:
-1. Measure all operational emissions within the Consumer boundary over a defined period (e.g., one week):
-   - Energy consumption of inference servers
-   - Energy consumption of API gateways and load balancers
-   - Energy consumption of monitoring and observability systems
-   - Energy consumption of caching and data storage
-2. Calculate embodied emissions for all hardware within the Consumer boundary
-3. Sum operational and embodied emissions to get total Consumer emissions (C)
+1. Measure all operational carbon within the Consumer boundary over a defined period (e.g., one week):
+   - Carbon emitted of inference servers
+   - Carbon emitted of API gateways and load balancers
+   - Carbon emitted of monitoring and observability systems
+   - Carbon emitted of caching and data storage
+2. Calculate embodied carbon for all hardware within the Consumer boundary
+3. Sum operational and embodied emissions to get total Consumer carbon (C)
 4. Count the total number of tokens processed during the same period (R)
 5. Calculate Consumer SCI: `SCI = C / R`
 
 **Example**:
-- Total Consumer operational emissions: 5,000 kg CO₂e/week
-- Total Consumer embodied emissions: 1,500 kg CO₂e/week
+- Total Consumer operational carbon: 5,000 kg CO₂e/week
+- Total Consumer embodied carbon: 1,500 kg CO₂e/week
 - Total tokens processed: 50 billion tokens/week
 - Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 0.13 g CO₂e/million tokens
 
