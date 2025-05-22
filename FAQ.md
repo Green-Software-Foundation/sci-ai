@@ -265,7 +265,7 @@ Here's how SCI for AI compares to other metrics based on these criteria:
 | **Granularity: Component**        | ✅          | ✅              | ❌         | ❌            |
 | **Granularity: Time**             | ✅          | ❌              | ❌         | ❌            |
 | **Run-Time & Design-Time**        | ✅          | ✅              | ✅         | ❌            |
-| **Explainability**                | 4/5         | 3/5             | 3/5        | 4/5           |
+| **Explainability**                | 4/5        | 3/5            | 3/5       | 4/5          |
 | **Broad Scope**                   | ✅          | ✅              | ✅         | ✅            |
 | **Open & Proprietary**            | ✅          | ✅              | ✅         | ✅            |
 | **Consensus Development**         | ✅          | ❌              | ❌         | ❌            |
@@ -310,20 +310,20 @@ A key principle of the SCI family of specifications is that measurement standard
 
 Here's how SCI for AI compares to other metrics in terms of incentivizing these positive behaviors:
 
-| Incentivization Criteria | SCI for AI | Green AI Index | EcoLogits | Energy Score |
-|--------------------------|------------|----------------|-----------|--------------|
-| Efficiency improvements to hosting infrastructure | ✅ | ✅ | ❌ | ❌ |
-| Efficiency improvements in silicon | ✅ | ✅ | ❌ | ❌ |
-| Efficiency improvements in model architecture | ✅ | ✅ | ✅ | ✅ |
-| Reducing carbon footprint of training | ✅ | ✅ | ❌ | ❌ |
-| Reducing carbon footprint of data collection/processing | ✅ | ❌ | ❌ | ❌ |
-| Running systems at times/regions with cleaner electricity | ✅ | ✅ | ☑️* | ❌** |
-| Running systems on edge devices when efficient | ✅ | ✅ | ❌ | ❌ |
-| Leverage pre-trained models and transfer learning | ✅ | ✅ | ❌ | ❌ |
-| Optimizing the size of models | ✅ | ✅ | ✅ | ✅ |
-| Use efficient file formats | ✅ | ✅ | ❌ | ❌ |
-| Evaluate tradeoffs between accuracy and efficiency | ✅ | ❓ | ❓ | ❓ |
-| Incentivize disclosure of required data | ❓ | ✅ | ❌ | ❌ |
+| Incentivization Criteria                                  | SCI for AI | Green AI Index | EcoLogits | Energy Score |
+| --------------------------------------------------------- | ---------- | -------------- | --------- | ------------ |
+| Efficiency improvements to hosting infrastructure         | ✅          | ✅              | ❌         | ❌            |
+| Efficiency improvements in silicon                        | ✅          | ✅              | ❌         | ❌            |
+| Efficiency improvements in model architecture             | ✅          | ✅              | ✅         | ✅            |
+| Reducing carbon footprint of training                     | ✅          | ✅              | ❌         | ❌            |
+| Reducing carbon footprint of data collection/processing   | ✅          | ❌              | ❌         | ❌            |
+| Running systems at times/regions with cleaner electricity | ✅          | ✅              | ☑️*        | ❌**          |
+| Running systems on edge devices when efficient            | ✅          | ✅              | ❌         | ❌            |
+| Leverage pre-trained models and transfer learning         | ✅          | ✅              | ❌         | ❌            |
+| Optimizing the size of models                             | ✅          | ✅              | ✅         | ✅            |
+| Use efficient file formats                                | ✅          | ✅              | ❌         | ❌            |
+| Evaluate tradeoffs between accuracy and efficiency        | ✅          | ❓              | ❓         | ❓            |
+| Incentivize disclosure of required data                   | ❓          | ✅              | ❌         | ❌            |
 
 #### Why create a new standard instead of adopting an existing one?
 
