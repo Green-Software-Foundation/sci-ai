@@ -283,6 +283,48 @@ Here's how SCI for AI compares to other metrics based on these criteria:
 
 **Energy Score only measures GPU energy during inference, explicitly excluding CPU, RAM, networking, and storage energy.
 
+
+#### What behaviors does SCI for AI incentivize?
+
+A key principle of the SCI family of specifications is that measurement standards must incentivize the right behaviors and avoid inadvertently promoting counterproductive actions. SCI for AI is designed to incentivize a specific set of actions that lead to systemic carbon reductions in AI systems:
+
+**Infrastructure and Hardware Optimizations:**
+- **Efficiency improvements to hosting infrastructure**: By measuring all operational emissions, SCI for AI rewards investments in more efficient data centers, cooling systems, and power infrastructure
+- **Efficiency improvements in silicon chips**: The specification incentivizes the use of more energy-efficient processors, GPUs, and specialized AI chips
+- **Running AI systems at times or in regions with cleaner electricity**: By using location-based emissions factors, the metric rewards temporal and spatial shifting to take advantage of renewable energy
+
+**AI-Specific Optimizations:**
+- **Efficiency improvements in model architecture**: Normalized functional units (per parameter, per FLOP) reward architectures that achieve better performance per unit of computation
+- **Reducing the carbon footprint of training**: Provider boundary includes training emissions, creating direct incentives for more efficient training methods
+- **Leverage pre-trained models and transfer learning**: By attributing training emissions to providers, the specification encourages reuse of existing models rather than training from scratch
+- **Optimizing the size of models**: Functional units based on parameters or FLOPs incentivize right-sizing models for their intended use
+- **Evaluate tradeoffs between accuracy and efficiency**: The persona-based approach allows both providers and consumers to make informed decisions about performance vs. carbon impact
+
+**Deployment and Usage Optimizations:**
+- **Running AI systems on edge devices when more efficient**: Consumer boundary includes edge runtime, incentivizing efficient edge deployment when appropriate
+- **Use efficient file formats**: Operational emissions measurement rewards optimization of data storage and transfer
+- **Reducing the carbon footprint of data collection and processing**: Provider boundary includes data engineering stage emissions
+
+**Transparency and Disclosure:**
+- **Incentivize disclosure of data required to perform calculations**: The specification's requirements for measurement create pressure for transparency in AI system emissions
+
+Here's how SCI for AI compares to other metrics in terms of incentivizing these positive behaviors:
+
+| Incentivization Criteria | SCI for AI | Green AI Index | EcoLogits | Energy Score |
+|--------------------------|------------|----------------|-----------|--------------|
+| Efficiency improvements to hosting infrastructure | ✅ | ✅ | ❌ | ❌ |
+| Efficiency improvements in silicon | ✅ | ✅ | ❌ | ❌ |
+| Efficiency improvements in model architecture | ✅ | ✅ | ✅ | ✅ |
+| Reducing carbon footprint of training | ✅ | ✅ | ❌ | ❌ |
+| Reducing carbon footprint of data collection/processing | ✅ | ❌ | ❌ | ❌ |
+| Running systems at times/regions with cleaner electricity | ✅ | ✅ | ☑️* | ❌** |
+| Running systems on edge devices when efficient | ✅ | ✅ | ❌ | ❌ |
+| Leverage pre-trained models and transfer learning | ✅ | ✅ | ❌ | ❌ |
+| Optimizing the size of models | ✅ | ✅ | ✅ | ✅ |
+| Use efficient file formats | ✅ | ✅ | ❌ | ❌ |
+| Evaluate tradeoffs between accuracy and efficiency | ✅ | ❓ | ❓ | ❓ |
+| Incentivize disclosure of required data | ❓ | ✅ | ❌ | ❌ |
+
 #### Why create a new standard instead of adopting an existing one?
 
 None of the existing metrics fully satisfies all requirements for a comprehensive, fair, and actionable carbon measurement standard for AI. SCI for AI builds on their strengths while addressing limitations, particularly in:
