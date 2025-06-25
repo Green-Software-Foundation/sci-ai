@@ -128,8 +128,6 @@ The Consumer boundary SHALL include all components related to the Runtime Operat
 ### 6.2 Provider Boundary
 
 The Provider boundary SHALL include all components related to the following lifecycle stages:
-
-- Prepare
 - Data Engineering
 - Model Training
 - System Integration
@@ -152,7 +150,7 @@ This includes:
 
 ### 7.1 Prepare (Provider)
 
-TBD - Systems used in the Prepare stage SHALL NOT be included in the Provider SCI calculation since they are not material to the total carbon emissions.
+TBD - Systems used in the Prepare stage SHALL NOT be included in Provider SCI calculations is confirmed and retained.
 
 ### 7.2 Data Engineering (Provider)
 
@@ -238,7 +236,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 
 **Functional Unit**: Per FLOP, Per Parameter, or Per Training Token (example uses Per FLOP)
 
-**Boundary**: Prepare, Data Engineering, Model Training, System Integration, End of Life
+**Boundary**: Data Engineering, Model Training, System Integration, End of Life
 
 **Calculation Method**:
 1. Measure all operational carbon within the Provider boundary:
