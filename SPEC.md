@@ -195,13 +195,45 @@ Consumer functional units SHALL align with established commercial pricing units 
 
 ### 8.2 Provider Functional Units
 
-Provider functional units SHALL align with neural scaling laws to enable meaningful comparisons and targets across model versions. One of the following units SHALL be used:
+Provider functional units SHALL align with one of the following metrics to normalize carbon emissions during AI model training. The choice of unit SHOULD reflect the primary optimization focus of the provider’s system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
 
-| Functional Unit | Description |
-|----------------|-------------|
-| Per Parameter | Carbon emissions per billion parameters |
-| Per Training Token | Carbon emissions per token in training data |
-| Per FLOP | Carbon emissions per floating point operation |
+| Functional Unit        | Description                                               | Efficiency Focus                      |
+|------------------------|-----------------------------------------------------------|----------------------------------------|
+| Per FLOP               | Carbon emissions per floating point operation             | Algorithmic & hardware efficiency      |
+| Per Training Token     | Carbon emissions per token in training data               | Data quality & curation efficiency     |
+| Per Parameter          | Carbon emissions per billion model parameters             | Model architecture efficiency          |
+
+#### 8.2.1 Guidance on Functional Unit Selection
+
+- **Per FLOP** is best suited for evaluating compute efficiency and incentivizes algorithmic improvements and optimized hardware utilization.  
+- **Per Training Token** aligns with data-centric strategies and encourages deduplication, curation, and synthetic augmentation.  
+- **Per Parameter** emphasizes compact, purposeful model designs, especially when adjusted for activation sparsity.
+
+#### 8.2.2 Reporting Expectations
+
+Providers SHALL clearly state:
+- The chosen functional unit and the rationale behind its selection
+- Whether emissions are normalized using gross or *effective* values (see explanation below)
+- Any assumptions or data processing steps used in the calculation (e.g., pruning strategies, synthetic augmentation)
+
+> **Explanation**:  
+> - **Gross values** refer to total quantities without adjustment — e.g., total parameters in the model, total tokens in a raw dataset, or total theoretical FLOPs.  
+> - **Effective values** account for actual usage or meaningful contributions — e.g., active parameters used per inference (for sparse models), deduplicated or curated tokens, or utilized FLOPs during computation.  
+>  
+> Reporting *effective* values gives a more realistic picture of efficiency by recognizing carbon savings from optimizations like pruning, deduplication, or sparse activations.
+
+This flexible approach allows providers to transparently highlight their optimization focus while avoiding misleading comparisons.
+
+> Reporting **multiple functional units MAY be encouraged**, especially when feasible, to provide a **comprehensive view** of efficiency across compute, data, and model design dimensions.
+
+**Example (Multi-Metric Reporting):**
+
+An organization training a language model might report:
+- **Carbon per FLOP**: 0.45 gCO₂e / 10¹² FLOPs  
+- **Carbon per Training Token**: 0.18 gCO₂e / 1,000 tokens  
+- **Carbon per Parameter**: 20 kgCO₂e / billion parameters  
+
+These values reflect respective gains from switching to energy-efficient hardware, curating training datasets, and pruning inactive model weights.
 
 ## 9. Implementation Examples
 
