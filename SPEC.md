@@ -12,11 +12,9 @@ This specification aims to:
 - Guide practitioners in making environmentally responsible decisions in AI development and deployment
 - Incentivize carbon efficiency improvements across the AI lifecycle
 
-This specification is applicable to a wide range of AI systems—from classical machine learning to modern paradigms such as Generative AI and Agentic AI—and is intended to be adoptable across organizations of all sizes.
-
 ## 2. Scope
 
-This specification applies to the following AI paradigms and applications:
+This specification covers a broad spectrum of AI systems, including classical machine learning, generative AI, agentic AI, and future approaches, and is intended to be applicable and scalable for organizations of any size.
 
 ### 2.1 AI Paradigms (Foundational Approaches)
 - Machine Learning (ML)
