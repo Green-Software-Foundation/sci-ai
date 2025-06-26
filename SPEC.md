@@ -128,8 +128,6 @@ The Consumer boundary SHALL include all components related to the Runtime Operat
 ### 6.2 Provider Boundary
 
 The Provider boundary SHALL include all components related to the following lifecycle stages:
-
-- Prepare
 - Data Engineering
 - Model Training
 - System Integration
@@ -270,7 +268,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 
 **Functional Unit**: Per FLOP, Per Parameter, or Per Training Token (example uses Per FLOP)
 
-**Boundary**: Prepare, Data Engineering, Model Training, System Integration, End of Life
+**Boundary**: Data Engineering, Model Training, System Integration, End of Life
 
 **Calculation Method**:
 1. Measure all operational carbon within the Provider boundary:
