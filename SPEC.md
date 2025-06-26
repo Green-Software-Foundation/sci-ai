@@ -14,7 +14,7 @@ This specification aims to:
 
 ## 2. Scope
 
-This specification covers a broad spectrum of AI systems, including classical machine learning, generative AI, agentic AI, and future approaches, and is intended to be applicable and scalable for organizations of any size.
+This specification covers a broad spectrum of AI systems, including classical machine learning, generative AI, agentic AI, and other emerging or future AI paradigms, and is intended for use by organizations of all sizes.
 
 ### 2.1 AI Paradigms (Foundational Approaches)
 - Machine Learning (ML)
