@@ -207,41 +207,110 @@ Provider functional units SHALL align with one of the following metrics to norma
 - **Per Training Token** aligns with data-centric strategies and encourages deduplication, curation, and synthetic augmentation.  
 - **Per Parameter** emphasizes compact, purposeful model designs, especially when adjusted for activation sparsity.
 
-#### 8.2.2 Reporting Expectations
 
-Providers SHALL clearly state:
-- The chosen functional unit and the rationale behind its selection
-- Whether emissions are normalized using gross or *effective* values (see explanation below)
-- Any assumptions or data processing steps used in the calculation (e.g., pruning strategies, synthetic augmentation)
+## 9. Disclosure Expectations
 
-> **Explanation**:  
-> - **Gross values** refer to total quantities without adjustment — e.g., total parameters in the model, total tokens in a raw dataset, or total theoretical FLOPs.  
-> - **Effective values** account for actual usage or meaningful contributions — e.g., active parameters used per inference (for sparse models), deduplicated or curated tokens, or utilized FLOPs during computation.  
->  
-> Reporting *effective* values gives a more realistic picture of efficiency by recognizing carbon savings from optimizations like pruning, deduplication, or sparse activations.
+This section defines the minimum requirements and recommendations for disclosing SCI for AI scores to ensure transparency, reproducibility, and meaningful comparisons.
 
-This flexible approach allows providers to transparently highlight their optimization focus while avoiding misleading comparisons.
+### 9.1 Mandatory Disclosure Requirements
 
-> Reporting **multiple functional units MAY be encouraged**, especially when feasible, to provide a **comprehensive view** of efficiency across compute, data, and model design dimensions.
+When disclosing an SCI for AI score, organizations SHALL provide the following information:
 
-**Example (Multi-Metric Reporting):**
+#### 9.1.1 Top-Level Aggregate Score
 
+Organizations SHALL disclose the top-level aggregate SCI score for the entire AI system being measured. This represents the total carbon intensity across all components within the defined software boundary.
+
+#### 9.1.2 Boundary Classification
+
+Organizations SHALL clearly identify whether the disclosed score represents:
+- A **Provider SCI score** (covering Data Engineering, Model Training, System Integration, and End of Life stages)
+- A **Consumer SCI score** (covering Runtime Operations stage)
+
+Organizations operating across both boundaries MAY choose to disclose either or both scores, but are not required to disclose both.
+
+#### 9.1.3 Functional Unit Definition
+
+Organizations SHALL provide a complete definition of the functional unit used, including sufficient technical detail to enable reproducible calculations by others. For example:
+
+**For Token-based functional units:**
+- Vocabulary size and tokenization methodology
+- Handling of special tokens (padding, start/end markers, etc.)
+- Token counting approach (gross vs. effective tokens)
+
+**For FLOP-based functional units:**
+- Whether theoretical or actual FLOPs are measured
+- Numerical precision used (FP16, FP32, etc.)
+- Hardware architecture assumptions
+- Any optimizations affecting FLOP calculations
+
+**For Parameter-based functional units:**
+- Whether gross or effective parameters are counted
+- Treatment of sparse or pruned parameters
+- Activation patterns and sparsity considerations
+
+#### 9.1.4 Lifecycle Stage Breakdown (Provider Scores Only)
+
+For Provider SCI scores, organizations SHALL disclose the carbon intensity broken down by each applicable lifecycle stage using the same functional unit as the top-level score.
+
+Consumer SCI scores are exempt from lifecycle breakdown as they only encompass Runtime Operations.
+
+#### 9.1.5 Measurement Metadata
+
+Organizations SHALL provide:
+- **Measurement Period**: Specific timeframe when data was collected
+- **Methodology Version**: Version of the SCI for AI specification used
+- **Model Version**: Version identifier of the AI system measured
+- **Measurement Date**: When the SCI calculation was performed
+
+### 9.2 Recommended Disclosure Practices
+
+#### 9.2.1 Sub-Component Breakdown
+
+Organizations SHOULD provide additional granularity by breaking down each lifecycle stage into its constituent sub-components. For example:
+
+**Data Engineering sub-components:**
+- Data collection systems
+- Preprocessing and cleaning infrastructure
+- Synthetic data generation
+
+**Model Training sub-components:**
+- Distributed training infrastructure
+- Model evaluation and benchmarking
+- Hyperparameter optimization
+
+**Runtime Operations sub-components:**
+- API and inference services
+- Orchestration and scaling systems
+- Monitoring and observability
+
+#### 9.2.2 Multi-Metric Reporting
+
+Provider organizations SHOULD report multiple functional units when feasible to provide a comprehensive view of efficiency across different optimization dimensions.
+
+**Example:**
 An organization training a language model might report:
-- **Carbon per FLOP**: 0.45 gCO₂e / 10¹² FLOPs  
-- **Carbon per Training Token**: 0.18 gCO₂e / 1,000 tokens  
-- **Carbon per Parameter**: 20 kgCO₂e / billion parameters  
+- **Carbon per FLOP**: 0.45 gCO₂e / 10¹² FLOPs
+- **Carbon per Training Token**: 0.18 gCO₂e / 1,000 tokens
+- **Carbon per Parameter**: 20 kgCO₂e / billion parameters
 
-These values reflect respective gains from switching to energy-efficient hardware, curating training datasets, and pruning inactive model weights.
+#### 9.2.3 Gross vs. Effective Values
 
-## 9. Implementation Examples
+When reporting functional units, organizations SHOULD clearly distinguish between:
+
+- **Gross values**: Total quantities without adjustment (e.g., total parameters, total training tokens, theoretical FLOPs)
+- **Effective values**: Quantities accounting for actual usage or meaningful contributions (e.g., active parameters, deduplicated tokens, utilized FLOPs)
+
+Reporting effective values provides a more realistic picture of efficiency by recognizing carbon savings from optimizations like pruning, deduplication, or sparse activations.
+
+## 10. Implementation Examples
 
 This section provides examples of how to apply the SCI for AI specification in real-world scenarios, demonstrating how to combine software boundaries and functional units to calculate meaningful SCI scores.
 
-### 9.1 Large Language Model (LLM) Example
+### 10.1 Large Language Model (LLM) Example
 
 For a typical Large Language Model service, two separate SCI scores should be calculated and reported:
 
-#### 9.1.1 Consumer SCI Calculation
+#### 10.1.1 Consumer SCI Calculation
 
 **Functional Unit**: Per Token
 
@@ -264,7 +333,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 - Total tokens processed: 50 billion tokens/week
 - Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 0.13 g CO₂e/million tokens
 
-#### 9.1.2 Provider SCI Calculation
+#### 10.1.2 Provider SCI Calculation
 
 **Functional Unit**: Per FLOP, Per Parameter, or Per Training Token (example uses Per FLOP)
 
@@ -287,17 +356,17 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 - Total FLOPs: 5 × 10²² FLOPs
 - Provider SCI = 200,000 kg CO₂e / (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁸ FLOPs
 
-#### 9.1.3 Reporting
+#### 10.1.3 Reporting
 
 The LLM would report both SCI values:
 - **Consumer SCI**: 0.13 g CO₂e/million tokens
 - **Provider SCI**: 4 g CO₂e/10¹⁸ FLOPs
 
-### 9.2 Computer Vision Model Example
+### 10.2 Computer Vision Model Example
 
 For a computer vision model used for image classification:
 
-#### 9.2.1 Consumer SCI Calculation
+#### 10.2.1 Consumer SCI Calculation
 
 **Functional Unit**: Per Inference
 
@@ -308,7 +377,7 @@ For a computer vision model used for image classification:
 - Total inferences: 40 million/month
 - Consumer SCI = 0.08 g CO₂e/inference
 
-#### 9.2.2 Provider SCI Calculation
+#### 10.2.2 Provider SCI Calculation
 
 **Functional Unit**: Per Parameter
 
@@ -319,7 +388,7 @@ For a computer vision model used for image classification:
 - Total parameters: 2.5 billion
 - Provider SCI = 30 kg CO₂e/billion parameters
 
-#### 9.2.3 Reporting
+#### 10.2.3 Reporting
 
 The computer vision model would report both SCI values:
 - **Consumer SCI**: 0.08 g CO₂e/inference
