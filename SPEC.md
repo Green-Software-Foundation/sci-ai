@@ -14,7 +14,7 @@ This specification aims to:
 
 ## 2. Scope
 
-This specification applies to the following AI paradigms and applications:
+This specification covers a broad spectrum of AI systems, including classical machine learning, generative AI, and agentic AI, and is designed to support current and future developments in the field.
 
 ### 2.1 AI Paradigms (Foundational Approaches)
 - Machine Learning (ML)
