@@ -187,14 +187,14 @@ The table below provides **suggested examples** of commonly used functional unit
 | AI System Type                          | Suggested Functional Unit            |
 |-----------------------------------------|---------------------------------------|
 | Large Language Models (LLMs)            | Per Token                            |
-| Video Generation                        | Per Second or Per Frame              |
+| Video Generation                        | Per Second             |
 | Image Generation                        | Per Image                            |
 | Agentic AI                              | Per Execution                        |
 | OCR / Document Analysis                 | Per Page Processed                   |
 | Classical Machine Learning (e.g., Classification) | Per Inference                  |
-| Machine Translation                     | Per Word Translated or Per Sentence   |
+| Machine Translation                     | Per Character Translated    |
 | Speech Recognition                      | Per Second of Audio Processed         |
-| Text-to-Speech                          | Per Second of Audio Generated         |
+| Text-to-Speech                          | Per Character of Text Processed         |
 
 
 ### 8.2 Provider Functional Units
