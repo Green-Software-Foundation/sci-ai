@@ -174,7 +174,7 @@ All carbon emissions associated with systems used in the Runtime Operations stag
 
 ### 7.6 End of Life (Provider)
 
-All carbon emissions associated with End of Life processes SHALL be included in the Provider SCI calculation.
+All carbon emissions associated with End of Life processes SHALL NOT be included in the Provider SCI calculation since they are not material.
 
 ## 8. Functional Units
 
@@ -253,7 +253,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
    - Carbon emitted of API gateways and load balancers
    - Carbon emitted of monitoring and observability systems
    - Carbon emitted of caching and data storage
-2. Calculate embodied carbon for all hardware within the Consumer boundary
+2. Calculate embodied carbon for all hardware within the Consumer boundary over the defined period.
 3. Sum operational and embodied emissions to get total Consumer carbon (C)
 4. Count the total number of tokens processed during the same period (R)
 5. Calculate Consumer SCI: `SCI = C / R`
@@ -279,7 +279,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 2. Calculate embodied emissions for all hardware within the Provider boundary
 3. Sum operational and embodied carbon to get total Provider carbon emissions (C)
 4. Calculate the total number of FLOPs used (R)
-5. Calculate Provider SCI: `SCI = PC / R`
+5. Calculate Provider SCI: `SCI = C / R`
 
 **Example**:
 - Total Provider operational emissions: 180,000 kg CO₂e
