@@ -110,6 +110,34 @@ This alignment ensures that each persona's SCI score reflects only the emissions
 - It creates actionable targets for future model improvements
 - It addresses the reality that newer, more capable models often require more resources
 
+#### What are examples of Consumer Functional Units?
+
+Consumer functional units are the reference units used to normalize carbon emissions within the Consumer boundary when calculating an SCI score. These units reflect how AI services are delivered, consumed, or billed in real-world scenarios, enabling consistent and actionable SCI scores for runtime emissions.
+
+The following table provides suggested examples of consumer functional units across different AI system types:
+
+| **AI System Type**                      | **Suggested Functional Unit**             |
+|-----------------------------------------|-------------------------------------------|
+| Large Language Models (LLMs)            | Per Token                                 |
+| Video Generation                        | Per Second or Per Frame                   |
+| Image Generation                        | Per Image                                 |
+| Agentic AI                              | Per Execution                             |
+| OCR / Document Analysis                 | Per Page Processed                        |
+| Classical Machine Learning              | Per Inference                             |
+| Machine Translation                     | Per Character Translated                  |
+| Speech Recognition                      | Per Second of Audio Processed             |
+| Text-to-Speech                          | Per Character of Text Processed           |
+
+Examples:
+- A language model used in a conversational AI service processes 1,000 tokens in a request. The SCI score is expressed as carbon emissions per token.
+- A video generation system produces 30 seconds of synthetic video content. The SCI score is calculated as carbon emissions per second of video output.
+- An image generation model creates 10 unique images in response to user prompts. The SCI score is measured as carbon emissions per image generated.
+
+These functional units reflect actual usage patterns and commercial billing models, making SCI scores both practical and decision-relevant for Consumers.
+
+The SCI for AI specification includes functional units for both **classical AI systems**, such as machine translation, speech recognition, and image classification, which use domain-specific units like characters, audio duration, or inferences; and **generative AI systems**, such as large language models, which operate on token-based input and output. In the future, as AI systems become increasingly multi-modal and unified across input types, it may be possible to normalize consumption entirely at the token level across modalities. Until then, we have aligned functional units with the dominant mode of usage for each AI system type and with the commercial cost models offered by AI service providers.
+
+
 #### Why not use "total emissions per version" for Providers?
 
 Total emissions per version fails to provide meaningful insights or drive improvements:
