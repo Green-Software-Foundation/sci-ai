@@ -268,7 +268,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 - Total Consumer operational carbon: 5,000 kg CO₂e/week
 - Total Consumer embodied carbon: 1,500 kg CO₂e/week
 - Total tokens processed: 50 billion tokens/week
-- Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 0.13 g CO₂e/million tokens
+- Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 130 g CO₂e/million tokens
 
 #### 9.1.2 Provider SCI Calculation
 
