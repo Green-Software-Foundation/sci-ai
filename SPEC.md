@@ -180,16 +180,22 @@ All carbon emissions associated with End of Life processes SHALL be included in 
 
 ### 8.1 Consumer Functional Units
 
-Consumer functional units SHALL align with established commercial pricing units based on the type of AI system:
+Consumer functional units represent the measurable unit of AI service consumption used to normalize carbon emissions within the Consumer boundary. The functional unit SHOULD align with how the AI service is delivered, consumed, or billed.
 
-| AI System Type | Functional Unit |
-|----------------|----------------|
-| LLM | Per Token |
-| Video Generation | Per Second |
-| Image Generation | Per Image |
-| Agentic AI | Per Execution |
-| OCR/Analysis | Per Page |
-| Classical ML | Per Inference |
+The table below provides **suggested examples** of commonly used functional units. Given the diversity of AI system types and consumption models, these examples are indicative and not exhaustive.
+
+| AI System Type                          | Suggested Functional Unit            |
+|-----------------------------------------|---------------------------------------|
+| Large Language Models (LLMs)            | Per Token                            |
+| Video Generation                        | Per Second             |
+| Image Generation                        | Per Image                            |
+| Agentic AI                              | Per Execution                        |
+| OCR / Document Analysis                 | Per Page Processed                   |
+| Classical Machine Learning (e.g., Classification) | Per Inference                  |
+| Machine Translation                     | Per Character Translated    |
+| Speech Recognition                      | Per Second of Audio Processed         |
+| Text-to-Speech                          | Per Character of Text Processed         |
+
 
 ### 8.2 Provider Functional Units
 
