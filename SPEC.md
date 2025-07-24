@@ -172,7 +172,7 @@ All carbon emissions associated with System Integration SHALL be included in the
 
 All carbon emissions associated with systems used in the Runtime Operations stage SHALL be included in the Consumer SCI calculation.
 
-### 7.6 End of Life (Provider)
+### 7.6 End of Life
 
 All carbon emissions associated with End of Life processes SHALL NOT be included in the Provider SCI calculation since they are not material.
 
