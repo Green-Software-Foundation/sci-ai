@@ -174,7 +174,7 @@ All carbon emissions associated with systems used in the Runtime Operations stag
 
 ### 7.6 End of Life
 
-All carbon emissions associated with End of Life processes SHALL NOT be included in the Provider SCI calculation since they are not material.
+Systems used in the End of Life stage SHALL be included in the SCI calculation when material; they MAY be included when not material.
 
 ## 8. Functional Units
 
