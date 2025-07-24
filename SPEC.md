@@ -150,7 +150,7 @@ This includes:
 
 ### 7.1 Prepare (Provider)
 
-Systems used in the Prepare stage SHALL NOT be included in the Provider SCI calculation unless they are material to the total carbon emissions.
+Systems used in the Prepare stage SHALL be included in the Provider SCI calculation when material; they MAY be included when not material.
 
 ### 7.2 Data Engineering (Provider)
 
