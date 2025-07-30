@@ -164,6 +164,8 @@ All carbon emissions associated with Model Training SHALL be included in the Pro
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
+Emissions from model training **SHALL** be calculated over the entire training duration, accounting for all epochs, parameter updates, intermediate runs, and early stopping phases.
+
 ### 7.4 System Integration (Provider)
 
 All carbon emissions associated with System Integration SHALL be included in the Provider SCI calculation.
