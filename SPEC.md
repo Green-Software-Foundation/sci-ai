@@ -291,7 +291,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 - Total Provider operational emissions: 180,000 kg CO₂e
 - Total Provider embodied emissions: 20,000 kg CO₂e
 - Total FLOPs: 5 × 10²² FLOPs
-- Provider SCI = 200,000 kg CO₂e / (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁸ FLOPs
+- Provider SCI = 200,000 kg CO₂e / (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs
 
 #### 9.1.3 Reporting
 
