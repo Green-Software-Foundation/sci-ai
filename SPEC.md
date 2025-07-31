@@ -164,7 +164,7 @@ All carbon emissions associated with Model Training SHALL be included in the Pro
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training **SHALL** be calculated over the entire training duration, accounting for all epochs, parameter updates, intermediate runs, and early stopping phases.
+Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, parameter updates, intermediate runs, and early stopping phases. 
 
 ### 7.4 System Integration (Provider)
 
