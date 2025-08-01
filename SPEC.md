@@ -220,7 +220,7 @@ Provider functional units SHALL align with one of the following metrics to norma
 Providers SHALL clearly state:
 - The chosen functional unit and the rationale behind its selection
 - Whether emissions are normalized using gross or *effective* values (see explanation below)
-- Any assumptions or data processing steps used in the calculation (e.g., pruning strategies, synthetic augmentation)
+- Core methodological approaches, system assumptions, and strategic protocols demonstrating material effect on performance metrics and recommended for standard implementation
 
 > **Explanation**:  
 > - **Gross values** refer to total quantities without adjustment — e.g., total parameters in the model, total tokens in a raw dataset, or total theoretical FLOPs.  
