@@ -105,7 +105,7 @@ The Model Training stage encompasses model selection, feature engineering, distr
 The System Integration stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
 
 ### 5.5 Runtime Operations
-The Runtime Operations stage includes model deployment for inference, active execution in deployed environments, monitoring performance metrics, implementing maintenance protocols, and applying FinOps practices across edge devices, data centers, and cloud environments.
+The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying FinOps practices across edge devices, data centers, and cloud environments.
 
 ### 5.6 End of Life
 The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
@@ -119,11 +119,14 @@ The SCI for AI specification defines boundaries based on two primary personas, e
 The Consumer boundary SHALL include all components related to the Runtime Operations lifecycle stage, including but not limited to:
 
 - API & Inference
-- Orchestration & Scaling
+- Orchestration
+- Scaling
 - Observability & Monitoring
 - Data & Feature Management
 - Storage & Artifacts
 - UX & Client-side
+- Model Tool & Service Connectors
+  
 
 ### 6.2 Provider Boundary
 
@@ -145,6 +148,7 @@ This includes:
 - Optimization & Efficiency Analysis
 - System Integration & Orchestration
 - Testing & Validation Systems
+- Model Tool Systems
 
 ## 7. AI Life Cycle Coverage
 
@@ -191,13 +195,15 @@ The table below provides **suggested examples** of commonly used functional unit
 | Large Language Models (LLMs)            | Per Token                            |
 | Video Generation                        | Per Second             |
 | Image Generation                        | Per Image                            |
-| Agentic AI                              | Per Execution                        |
+| Agentic AI                              | Per Workflow Execution               |
 | OCR / Document Analysis                 | Per Page Processed                   |
 | Classical Machine Learning (e.g., Classification) | Per Inference                  |
 | Machine Translation                     | Per Character Translated    |
 | Speech Recognition                      | Per Second of Audio Processed         |
 | Text-to-Speech                          | Per Character of Text Processed         |
 
+Note:
+For workflows like Agentic AI involving multiple model calls, tool invocations, or service integrations, the total emissions SHALL include those from all triggered operations within the orchestration — such as model executions, tool execution, retrieval steps, and model-to-model exchanges.
 
 ### 8.2 Provider Functional Units
 
