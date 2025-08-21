@@ -203,7 +203,7 @@ The table below provides **suggested examples** of commonly used functional unit
 | Text-to-Speech                          | Per Character of Text Processed         |
 
 Note:
-For workflows like Agentic AI involving multiple model calls, tool invocations, or service integrations, the total emissions SHALL include those from all triggered operations within the orchestration — such as model executions, tool execution, retrieval steps, and model-to-model exchanges.
+Where an AI service involves multiple model calls, tool invocations, or service integrations, emissions SHOULD account for all triggered operations — including model executions, tool usage, retrieval steps, model-to-model exchanges, and any other impacts considered material.
 
 ### 8.2 Provider Functional Units
 
