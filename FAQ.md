@@ -89,8 +89,8 @@ If a single metric tried to combine everything, it would dilute accountability a
 
 The lifecycle stages are assigned to personas based on their typical control and agency:
 
-- **Providers** (companies that build AI systems) control the emissions from Prepare, Data Engineering, Model Training, System Integration, and End of Life stages.
-- **Consumers** (organizations and individuals who use AI systems) control the emissions from Runtime Operations.
+- **Providers** (companies that build AI systems) control the emissions from Inception, Design and Development, Deployment, and Retirement stages.
+- **Consumers** (organizations and individuals who use AI systems) control the emissions from Operation and Monitoring.
 
 This alignment ensures that each persona's SCI score reflects only the emissions they can reasonably influence or control.
 
@@ -177,7 +177,7 @@ These insights enable meaningful target-setting. If you've just finished trainin
 
 Training emissions are included in the Provider SCI calculation only. This is because:
 
-1. Training is part of the Model Training lifecycle stage, which is assigned to the Provider boundary
+1. Training is part of the Design and Development lifecycle stage, which is assigned to the Provider boundary
 2. Providers have direct control over training methodologies, hardware selection, and efficiency optimizations
 3. It creates clear accountability for the emissions produced during the creation of AI models
 
@@ -209,9 +209,9 @@ The comprehensive lifecycle approach:
 - Aligns with established lifecycle assessment methodologies
 - Enables more complete and accurate comparisons between AI systems
 
-#### Why separate Model Training from System Integration?
+#### Why is model training included in the Design and Development stage?
 
-Model Training is separated as its own lifecycle stage because:
+Model training is included in the Design and Development stage because:
 1. It often represents a significant portion of an AI system's carbon footprint
 2. It involves unique considerations around resource allocation and optimization
 3. It's a key area of focus for emissions reduction efforts
@@ -270,12 +270,11 @@ During development, we agreed to evaluate SCI for AI and existing metrics agains
 - **Existing Standards Alignment**: Does it align with established practices like LCA or GHG Protocol?
 
 **Lifecycle Coverage:**
-- Prepare
-- Data Engineering
-- Model Training
-- System Integration
-- Runtime Operations
-- End of Life
+- Inception
+- Design and Development
+- Deployment
+- Operation and Monitoring
+- Retirement
 
 **Incentivization:**
 - Does it encourage infrastructure efficiency improvements?
@@ -300,12 +299,11 @@ Here's how SCI for AI compares to other metrics based on these criteria:
 | **ISO Compatibility**             | ✅          | ❓              | ❓         | ❌            |
 | **IPR Clarity**                   | ✅          | ❌              | ❌         | ❌            |
 | **Existing Standards Alignment**  | ✅          | ✅              | ✅         | ❌            |
-| **Lifecycle: Prepare**            | ✅          | ❌              | ❌         | ❌            |
-| **Lifecycle: Data Engineering**   | ✅          | ❌              | ❌         | ❌            |
-| **Lifecycle: Model Training**     | ✅          | ✅              | ❌         | ❌            |
-| **Lifecycle: System Integration** | ✅          | ❌              | ❌         | ❌            |
-| **Lifecycle: Runtime Operations** | ✅          | ✅              | ☑️*        | ☑️**          |
-| **Lifecycle: End of Life**        | ✅          | ❌              | ❌         | ❌            |
+| **Lifecycle: Inception**          | ✅          | ❌              | ❌         | ❌            |
+| **Lifecycle: Design and Development** | ✅      | ✅              | ❌         | ❌            |
+| **Lifecycle: Deployment**         | ✅          | ❌              | ❌         | ❌            |
+| **Lifecycle: Operation and Monitoring** | ✅    | ✅              | ☑️*        | ☑️**          |
+| **Lifecycle: Retirement**         | ✅          | ❌              | ❌         | ❌            |
 
 *EcoLogits only accounts for computation of GPU-equipped servers, omitting other runtime infrastructure
 
