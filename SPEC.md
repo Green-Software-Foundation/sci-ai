@@ -105,7 +105,7 @@ The Model Training stage encompasses model selection, feature engineering, distr
 The System Integration stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
 
 ### 5.5 Runtime Operations
-The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying FinOps practices across edge devices, data centers, and cloud environments.
+The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge device, data centers, and cloud environments.
 
 ### 5.6 End of Life
 The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
