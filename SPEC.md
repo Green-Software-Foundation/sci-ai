@@ -77,9 +77,9 @@ T.5
 **Inference**  
 Process of using a trained AI model to make predictions or generate outputs based on input data
 
-T.6  
-**Token**  
-Atomic unit of text processing in language models, typically representing parts of words, words, or characters
+T.6
+**Token**
+A token is a fundamental unit of data that a model uses to process information. For example in text, tokens typically represent parts of words, or characters.
 
 T.7  
 **Parameter**  
