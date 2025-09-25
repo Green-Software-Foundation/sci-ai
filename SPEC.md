@@ -331,7 +331,7 @@ For a computer vision model used for image classification:
 **Example**:
 - Total Provider emissions: 75,000 kg CO₂e
 - Total parameters: 2.5 billion
-- Provider SCI = 30 kg CO₂e/billion parameters
+- Provider SCI = 3000 kg CO₂e/billion parameters
 
 #### 9.2.3 Reporting
 
