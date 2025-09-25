@@ -297,7 +297,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 
 #### 9.1.3 Reporting
 
-The LLM would report both SCI values:
+For an LLM the following SCI values can be reported:
 - **Consumer SCI**: 0.13 g CO₂e/million tokens
 - **Provider SCI**: 4 g CO₂e/10¹⁵ FLOPs
 
@@ -329,6 +329,6 @@ For a computer vision model used for image classification:
 
 #### 9.2.3 Reporting
 
-The computer vision model would report both SCI values:
+For a computer vision model the following SCI values can be reported:
 - **Consumer SCI**: 0.08 g CO₂e/inference
 - **Provider SCI**: 30 kg CO₂e/billion parameters
