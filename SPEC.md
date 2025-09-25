@@ -77,9 +77,9 @@ T.5
 **Inference**  
 Process of using a trained AI model to make predictions or generate outputs based on input data
 
-T.6  
-**Token**  
-Atomic unit of text processing in language models, typically representing parts of words, words, or characters
+T.6
+**Token**
+A token is a fundamental unit of data that a model uses to process information. For example in text, tokens typically represent parts of words, or characters.
 
 T.7  
 **Parameter**  
@@ -92,17 +92,17 @@ Basic computational operation used as a measure of computational work in AI syst
 ## 5. AI Lifecycle Stages
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
 
-### 5.1 Prepare
-The Prepare stage involves defining the AI problem, assessing whether AI is the appropriate solution, engaging with end-users, and establishing performance objectives and computational constraints.
+### 5.1 Inception
+The Inception stage involves defining the AI problem, assessing whether AI is the appropriate solution, engaging with end-users, and establishing performance objectives and computational constraints.
 
-### 5.2 Data Engineering
-The Data Engineering stage includes data collection from various sources, preprocessing (cleaning and normalizing), and generating synthetic data when appropriate to reduce the need for excessive data collection.
+### 5.2 Design and Development
+The Design and Development stage includes data collection from various sources, preprocessing (cleaning and normalizing), generating synthetic data when appropriate to reduce the need for excessive data collection, model selection, feature engineering, distributed training setup, evaluation metric definition, resource allocation, benchmarking, and computational resource optimization.
 
-### 5.3 Model Training
-The Model Training stage encompasses model selection, feature engineering, distributed training setup, evaluation metric definition, resource allocation, benchmarking, and computational resource optimization.
+### 5.3 Deployment
+The Deployment stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
 
-### 5.4 System Integration
-The System Integration stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
+### 5.4 Operation and Monitoring
+The Operation and Monitoring stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying FinOps practices across edge devices, data centers, and cloud environments.
 
 ### 5.5 Runtime Operations
 The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
@@ -116,7 +116,7 @@ The SCI for AI specification defines boundaries based on two primary personas, e
 
 ### 6.1 Consumer Boundary
 
-The Consumer boundary SHALL include all components related to the Runtime Operations lifecycle stage, including but not limited to:
+The Consumer boundary SHALL include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
 
 - API & Inference
 - Orchestration
@@ -131,10 +131,9 @@ The Consumer boundary SHALL include all components related to the Runtime Operat
 ### 6.2 Provider Boundary
 
 The Provider boundary SHALL include all components related to the following lifecycle stages:
-- Data Engineering
-- Model Training
-- System Integration
-- End of Life/Disposal
+- Design and Development
+- Deployment
+- Retirement
 
 This includes:
 - Project Scoping & Planning Systems
@@ -152,35 +151,33 @@ This includes:
 
 ## 7. AI Life Cycle Coverage
 
-### 7.1 Prepare (Provider)
+### 7.1 Inception (Provider)
 
-Systems used in the Prepare stage SHALL be included in the Provider SCI calculation when material; they MAY be included when not material.
+Systems used in the Inception stage SHALL be included in the Provider SCI calculation when material; they MAY be included when not material.
 
-### 7.2 Data Engineering (Provider)
+### 7.2 Design and Development (Provider)
 
-All carbon emissions associated with systems used in the Data Engineering stage SHALL be included in the Provider SCI calculation.
-
-### 7.3 Model Training (Provider)
-
-All carbon emissions associated with Model Training SHALL be included in the Provider SCI calculation, including:
-- Compute, storage, and networking resources
+All carbon emissions associated with systems used in the Design and Development stage SHALL be included in the Provider SCI calculation, including:
+- Data collection, preprocessing, and cleaning systems
+- Synthetic data generation
+- Compute, storage, and networking resources for model training
 - Distributed training infrastructure
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, parameter updates, intermediate runs, and early stopping phases. 
+Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate runs, and early stopping phases. 
 
-### 7.4 System Integration (Provider)
+### 7.3 Deployment (Provider)
 
-All carbon emissions associated with System Integration SHALL be included in the Provider SCI calculation.
+All carbon emissions associated with Deployment SHALL be included in the Provider SCI calculation.
 
-### 7.5 Runtime Operations (Consumer)
+### 7.4 Operation and Monitoring (Consumer)
 
-All carbon emissions associated with systems used in the Runtime Operations stage SHALL be included in the Consumer SCI calculation.
+All carbon emissions associated with systems used in the Operation and Monitoring stage SHALL be included in the Consumer SCI calculation.
 
-### 7.6 End of Life
+### 7.5 Retirement
 
-Systems used in the End of Life stage SHALL be included in the SCI calculation when material; they MAY be included when not material.
+Systems used in the Retirement stage SHALL be included in the SCI calculation when material; they MAY be included when not material.
 
 ## 8. Functional Units
 
@@ -259,7 +256,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 
 **Functional Unit**: Per Token
 
-**Boundary**: Runtime Operations (inference services, API infrastructure, monitoring systems)
+**Boundary**: Operation and Monitoring (inference services, API infrastructure, monitoring systems)
 
 **Calculation Method**:
 1. Measure all operational carbon within the Consumer boundary over a defined period (e.g., one week):
@@ -276,13 +273,13 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 - Total Consumer operational carbon: 5,000 kg CO₂e/week
 - Total Consumer embodied carbon: 1,500 kg CO₂e/week
 - Total tokens processed: 50 billion tokens/week
-- Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 130 g CO₂e/million tokens
+- Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 130 kg CO₂e/billion tokens
 
 #### 9.1.2 Provider SCI Calculation
 
 **Functional Unit**: Per FLOP, Per Parameter, or Per Training Token (example uses Per FLOP)
 
-**Boundary**: Data Engineering, Model Training, System Integration, End of Life
+**Boundary**: Design and Development, Deployment, Retirement
 
 **Calculation Method**:
 1. Measure all operational carbon within the Provider boundary:
@@ -303,9 +300,9 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 
 #### 9.1.3 Reporting
 
-The LLM would report both SCI values:
+For an LLM the following SCI values can be reported:
 - **Consumer SCI**: 0.13 g CO₂e/million tokens
-- **Provider SCI**: 4 g CO₂e/10¹⁸ FLOPs
+- **Provider SCI**: 4 g CO₂e/10¹⁵ FLOPs
 
 ### 9.2 Computer Vision Model Example
 
@@ -315,7 +312,7 @@ For a computer vision model used for image classification:
 
 **Functional Unit**: Per Inference
 
-**Boundary**: Runtime Operations
+**Boundary**: Operation and Monitoring
 
 **Example**:
 - Total Consumer emissions: 3,200 kg CO₂e/month
@@ -326,15 +323,15 @@ For a computer vision model used for image classification:
 
 **Functional Unit**: Per Parameter
 
-**Boundary**: Prepare, Data Engineering, Model Training, System Integration, End of Life
+**Boundary**: Inception, Design and Development, Deployment, Retirement
 
 **Example**:
 - Total Provider emissions: 75,000 kg CO₂e
 - Total parameters: 2.5 billion
-- Provider SCI = 30 kg CO₂e/billion parameters
+- Provider SCI = 3000 kg CO₂e/billion parameters
 
 #### 9.2.3 Reporting
 
-The computer vision model would report both SCI values:
+For a computer vision model the following SCI values can be reported:
 - **Consumer SCI**: 0.08 g CO₂e/inference
 - **Provider SCI**: 30 kg CO₂e/billion parameters
