@@ -69,9 +69,9 @@ T.3
 **Provider**  
 Entity that develops and delivers AI services, selling functional units of AI
 
-T.4  
-**Model Training**  
-Process of developing an AI model by exposing it to data and optimizing its parameters to perform a specific task
+T.4
+**Model Training**
+Process of developing an AI model by exposing it to data and optimizing its parameters to perform a specific task(s)
 
 T.5  
 **Inference**  
@@ -79,7 +79,7 @@ Process of using a trained AI model to make predictions or generate outputs base
 
 T.6
 **Token**
-A token is a fundamental unit of data that a model uses to process information. For example in text, tokens typically represent parts of words, or characters.
+Atomic unit of text processing in language models, typically representing parts of words, or characters
 
 T.7  
 **Parameter**  
