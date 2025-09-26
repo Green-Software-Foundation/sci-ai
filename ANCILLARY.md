@@ -170,7 +170,7 @@ Specifically they defined these life cycle stages which apply to Green AI and th
 
 * **System Integration**: Design, develop, and test the distributed end-to-end runtime environment in which the model will be deployed.
 
-* **Runtime Operations**: The execution of the model in a runtime environment, including inference, maintenance, monitoring, consumer edge devices and datacenter/cloud usage.
+* **Operation and Monitoring**: The execution of the model in a runtime environment, including inference, maintenance, monitoring, consumer edge devices and datacenter/cloud usage.
 
 * **End of Life**: “Un-deploy” the model in the runtime environment. 
 
@@ -182,7 +182,7 @@ The SCI measure SHALL incentivise optimisations at each stage of this lifecycle.
 | Data Engineering | ❌ | ❌ | ❌ | ❌ |
 | Model training | ✅ | ❌ | ❌ | ✅ |
 | System integration | ❌ | ❌ | ❌ | ❌ |
-| Runtime operations | ✅ | ☑️ | ☑️ | ✅ |
+| Operation and Monitoring | ✅ | ☑️ | ☑️ | ✅ |
 | End of life | ❌ | ❌ | ❌ | ❌ |
 
 

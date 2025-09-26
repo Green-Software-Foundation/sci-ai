@@ -194,7 +194,7 @@ We decided not to include training emissions in the Consumer SCI calculation for
 1. **Clear Boundaries**: Keeping training emissions solely within the Provider boundary maintains clean, non-overlapping responsibility areas
 2. **Agency Alignment**: Consumers typically have no control over how models are trained
 3. **Measurement Simplicity**: Separating training from inference creates more straightforward measurement methodologies
-4. **Incentive Clarity**: It focuses Consumer attention on what they can control - the efficiency of runtime operations
+4. **Incentive Clarity**: It focuses Consumer attention on what they can control - the efficiency of operation and monitoring
 
 > [!IMPORTANT] 
 > This doesn't mean training emissions are ignored - they're captured in the Provider SCI score, which Consumers can consider when selecting AI systems alongside the Consumer SCI score.

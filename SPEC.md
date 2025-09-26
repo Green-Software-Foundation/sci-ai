@@ -104,11 +104,8 @@ The Deployment stage involves incorporating the AI model into larger systems, de
 ### 5.4 Operation and Monitoring
 The Operation and Monitoring stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying FinOps practices across edge devices, data centers, and cloud environments.
 
-### 5.5 Runtime Operations
-The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
-
-### 5.6 End of Life
-The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
+### 5.5 Retirement
+The Retirement stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
 
 ## 6. Persona-Based Software Boundary Definition
 
