@@ -1,8 +1,8 @@
 ---
 name: Consistency and IPR Review (Add project title)
 description: Enter the Issue title.
-title: '[Consistency & IPR Review]: '
-labels: [Consistency & IPR Review]
+title: '[Consistency Review]: '
+labels: [Consistency Review]
 projects: [SCI AI Project]
 assignees:
 - Add Project lead details
@@ -11,8 +11,8 @@ body:
     id: Consistency-and-IPR-Review
     attributes:
       label: Company Submission
-      description: Consistency and IPR Review
-      placeholder: Consistency and IPR Review
+      description: Consistency Review
+      placeholder: Consistency Review
       value: "Add your observations & comments here, along with the document section"
     validations:
       required: true
