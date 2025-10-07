@@ -5,7 +5,8 @@ title: '[Consistency Review]: '
 labels: [Consistency Review]
 projects: [SCI AI Project]
 assignees:
-- Add Project lead details
+- navveenb
+- seanmcilroy29
 body:
   - type: textarea
     id: Consistency-and-IPR-Review
