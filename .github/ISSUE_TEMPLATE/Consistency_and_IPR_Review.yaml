@@ -1,7 +1,7 @@
 ---
-name: Consistency and IPR Review (Add project title)
-description: Enter the Issue title.
-title: '[Consistency Review]: '
+name: Consistency Review (Add project title)
+description: Consistency Review
+title: '[Consistency Review]'
 labels: [Consistency Review]
 projects: [SCI AI Project]
 assignees:
