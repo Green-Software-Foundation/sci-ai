@@ -131,8 +131,10 @@ The Consumer boundary SHALL include all components related to the Operation and 
 ### 6.2 Provider Boundary
 
 The Provider boundary SHALL include all components related to the following lifecycle stages:
+- Inception
 - Design and Development
 - Deployment
+- Operations and Montitoring
 - Retirement
 
 This includes:
