@@ -134,7 +134,6 @@ The Provider boundary SHALL include all components related to the following life
 - Inception
 - Design and Development
 - Deployment
-- Operations and Montitoring
 - Retirement
 
 This includes:
