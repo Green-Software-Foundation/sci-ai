@@ -173,7 +173,7 @@ All carbon emissions associated with Deployment SHALL be included in the Provide
 
 All carbon emissions associated with systems used in the Operation and Monitoring stage SHALL be included in the Consumer SCI calculation.
 
-### 7.5 Retirement
+### 7.5 Retirement (Consumer and Provider)
 
 Systems used in the Retirement stage SHALL be included in the SCI calculation when material; they MAY be included when not material.
 
