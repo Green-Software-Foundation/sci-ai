@@ -1,4 +1,4 @@
-# Software Carbon Intensity (SCI) for Artificial intelligence (AI)
+# Software Carbon Intensity (SCI) for Artificial Intelligence (AI)
 
 A specification addressing the challenges of measuring Artificial intelligence carbon emissions
 
