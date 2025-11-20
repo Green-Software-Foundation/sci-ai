@@ -17,7 +17,7 @@ The project is led by:
 * [Navveen Balani (Accenture)](https://github.com/navveenb)
 
 ## Status
-The SC approved this project for public review on November 20th. 
+The SC ratified this project for public review on November 20th. 
 
 ## Copyright
 Standard WG projects are copyrighted under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
