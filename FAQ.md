@@ -89,7 +89,7 @@ If a single metric tried to combine everything, it would dilute accountability a
 
 The lifecycle stages are assigned to personas based on their typical control and agency:
 
-- **Providers** (companies that build AI systems) control the emissions from Inception, Design and Development, Deployment, and Retirement stages.
+- **Consumer & Providers** (companies that build AI systems) control the emissions from Inception, Design and Development, Deployment, and Retirement stages.
 - **Consumers** (organizations and individuals who use AI systems) control the emissions from Operation and Monitoring.
 
 This alignment ensures that each persona's SCI score reflects only the emissions they can reasonably influence or control.
@@ -119,7 +119,7 @@ The following table provides suggested examples of consumer functional units acr
 | **AI System Type**                      | **Suggested Functional Unit**             |
 |-----------------------------------------|-------------------------------------------|
 | Large Language Models (LLMs)            | Per Token                                 |
-| Video Generation                        | Per Second or Per Frame                   |
+| Video Generation                        | Per Second or Per Frame for Generation    |
 | Image Generation                        | Per Image                                 |
 | Agentic AI                              | Per Execution                             |
 | OCR / Document Analysis                 | Per Page Processed                        |
