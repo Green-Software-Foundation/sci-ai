@@ -1,0 +1,450 @@
+name: agentic-ai
+description: sketch for agentic ai measurement
+tags: null
+explain: false
+aggregation:
+  metrics:
+    - sci
+  type: both
+initialize:
+  plugins:
+    sci:
+      path: builtin
+      method: Sci
+      config:
+        functional-unit: requests
+    energy-to-carbon:
+      path: builtin
+      method: Multiply
+      config:
+        input-parameters:
+          - energy
+          - grid-intensity
+        output-parameter: carbon
+execution:
+  command: >-
+    /home/joseph/.npm/_npx/1bf7c3c15bf47d04/node_modules/.bin/ts-node
+    /home/joseph/Code/if/src/if-run/index.ts -m manifests/ai.yml -o
+    agentic-ai-output.yml
+  environment:
+    if-version: 1.0.1
+    os: Ubuntu
+    os-version: 20.04.6 LTS
+    node-version: 21.4.0
+    date-time: 2025-04-11T15:15:40.304Z (UTC)
+    dependencies:
+      - '@babel/core@7.22.10'
+      - '@babel/preset-typescript@7.23.3'
+      - '@commitlint/cli@18.6.0'
+      - '@commitlint/config-conventional@18.6.0'
+      - '@grnsft/if-core@0.0.29'
+      - '@jest/globals@29.7.0'
+      - '@types/jest@29.5.8'
+      - '@types/js-yaml@4.0.9'
+      - '@types/luxon@3.4.2'
+      - '@types/node@20.9.0'
+      - axios-mock-adapter@1.22.0
+      - axios@1.8.3
+      - cross-env@7.0.3
+      - csv-parse@5.5.6
+      - csv-stringify@6.4.6
+      - fixpack@4.0.0
+      - gts@5.2.0
+      - husky@8.0.3
+      - jest@29.7.0
+      - js-yaml@4.1.0
+      - lint-staged@15.2.10
+      - luxon@3.4.4
+      - release-it@16.3.0
+      - rimraf@5.0.5
+      - ts-command-line-args@2.5.1
+      - ts-jest@29.1.1
+      - typescript-cubic-spline@1.0.1
+      - typescript@5.2.2
+      - winston@3.11.0
+      - zod@3.23.8
+  status: success
+tree:
+  children:
+    coordinator-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00 2025-04-11T00:00
+              duration: 3600
+              energy: 1000
+              grid-intensity: 350
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00 2025-04-11T00:00
+              duration: 3600
+              energy: 1000
+              grid-intensity: 350
+              requests: 10000
+              carbon: 350000
+              sci: 35
+          aggregated:
+            sci: 35
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 25000
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 25000
+              requests: 10000
+              sci: 2.5
+          aggregated:
+            sci: 2.5
+      outputs:
+        - sci: 37.5
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 37.5
+    summarization-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 750
+              grid-intensity: 350
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 750
+              grid-intensity: 350
+              requests: 10000
+              carbon: 262500
+              sci: 26.25
+          aggregated:
+            sci: 26.25
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 15000
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 15000
+              requests: 10000
+              sci: 1.5
+          aggregated:
+            sci: 1.5
+      outputs:
+        - sci: 27.75
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 27.75
+    retrieval-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 400
+              grid-intensity: 350
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 400
+              grid-intensity: 350
+              requests: 10000
+              carbon: 140000
+              sci: 14
+          aggregated:
+            sci: 14
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 10000
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 10000
+              requests: 10000
+              sci: 1
+          aggregated:
+            sci: 1
+      outputs:
+        - sci: 15
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 15
+    code-execution-agent:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 600
+              grid-intensity: 350
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 600
+              grid-intensity: 350
+              requests: 10000
+              carbon: 210000
+              sci: 21
+          aggregated:
+            sci: 21
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 9000
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 9000
+              requests: 10000
+              sci: 0.9
+          aggregated:
+            sci: 0.9
+      outputs:
+        - sci: 21.9
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 21.9
+    external-llm-api:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 5500
+              grid-intensity: 350
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 5500
+              grid-intensity: 350
+              requests: 10000
+              carbon: 1925000
+              sci: 192.5
+          aggregated:
+            sci: 192.5
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 30000
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 30000
+              requests: 10000
+              sci: 3
+          aggregated:
+            sci: 3
+      outputs:
+        - sci: 195.5
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 195.5
+    mcp-server:
+      children:
+        operational:
+          pipeline:
+            compute:
+              - energy-to-carbon
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 20000
+              grid-intensity: 350
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              energy: 20000
+              grid-intensity: 350
+              requests: 10000
+              carbon: 7000000
+              sci: 700
+          aggregated:
+            sci: 700
+        embodied:
+          pipeline:
+            compute:
+              - sci
+          inputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 6000
+              requests: 10000
+          outputs:
+            - timestamp: 2023-07-06T00:00
+              duration: 3600
+              carbon: 6000
+              requests: 10000
+              sci: 0.6
+          aggregated:
+            sci: 0.6
+      outputs:
+        - sci: 700.6
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 700.6
+    external-apis:
+      children:
+        external-api-1:
+          children:
+            operational:
+              pipeline:
+                compute:
+                  - energy-to-carbon
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  energy: 600
+                  grid-intensity: 350
+                  requests: 10000
+              outputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  energy: 600
+                  grid-intensity: 350
+                  requests: 10000
+                  carbon: 210000
+                  sci: 21
+              aggregated:
+                sci: 21
+            embodied:
+              pipeline:
+                compute:
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  carbon: 3000
+                  requests: 10000
+              outputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  carbon: 3000
+                  requests: 10000
+                  sci: 0.3
+              aggregated:
+                sci: 0.3
+          outputs:
+            - sci: 21.3
+              timestamp: 2023-07-06T00:00
+              duration: 3600
+          aggregated:
+            sci: 21.3
+        external-api-2:
+          children:
+            operational:
+              pipeline:
+                compute:
+                  - energy-to-carbon
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  energy: 250
+                  grid-intensity: 350
+                  requests: 10000
+              outputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  energy: 250
+                  grid-intensity: 350
+                  requests: 10000
+                  carbon: 87500
+                  sci: 8.75
+              aggregated:
+                sci: 8.75
+            embodied:
+              pipeline:
+                compute:
+                  - sci
+              inputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  carbon: 2500
+                  requests: 10000
+              outputs:
+                - timestamp: 2023-07-06T00:00
+                  duration: 3600
+                  carbon: 2500
+                  requests: 10000
+                  sci: 0.25
+              aggregated:
+                sci: 0.25
+          outputs:
+            - sci: 9
+              timestamp: 2023-07-06T00:00
+              duration: 3600
+          aggregated:
+            sci: 9
+      outputs:
+        - sci: 30.3
+          timestamp: 2023-07-06T00:00
+          duration: 3600
+      aggregated:
+        sci: 30.3
+  outputs:
+    - sci: 1028.55
+      timestamp: 2023-07-06T00:00
+      duration: 3600
+  aggregated:
+    sci: 1028.55

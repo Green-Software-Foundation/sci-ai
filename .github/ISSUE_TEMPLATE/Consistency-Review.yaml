@@ -1,0 +1,23 @@
+---
+name: Consistency Review - SCI for AI
+description: Consistency Review
+title: '[Consistency Review]'
+labels: [Consistency Review]
+projects: [SCI AI Project]
+assignees:
+- navveenb
+- seanmcilroy29
+body:
+  - type: textarea
+    id: Consistency-and-IPR-Review
+    attributes:
+      label: Company Submission
+      description: Consistency Review
+      placeholder: Consistency Review
+      value: "Add your observations & comments here, along with the document section"
+    validations:
+      required: true
+  - type: markdown
+    attributes:
+      value: "Add details"
+

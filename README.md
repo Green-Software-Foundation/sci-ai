@@ -1,4 +1,4 @@
-# Software Carbon Intensity (SCI) for Artificial intelligence (AI)
+# Software Carbon Intensity (SCI) for Artificial Intelligence (AI)
 
 A specification addressing the challenges of measuring Artificial intelligence carbon emissions
 
@@ -18,10 +18,7 @@ The project is led by:
 * [Henry Richards (WattTime) @Henry-WattTime
 
 ## Status
-
-> **This is a pre-draft Standard and has not been approved or adopted by the Green Software Foundation. this pre-draft may not be relied upon for any purpose other than review of the current state of development.**
-
-This project entered the Green Software Foundation on 20 November 2024 [[proposal](https://github.com/Green-Software-Foundation/sci/discussions/391)]. 
+The SC ratified this project for public review on November 20th. 
 
 ## Copyright
 Standard WG projects are copyrighted under [Creative Commons Attribution 4.0](https://creativecommons.org/licenses/by/4.0/).
