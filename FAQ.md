@@ -121,7 +121,7 @@ The following table provides suggested examples of consumer functional units acr
 | Large Language Models (LLMs)            | Per Token                                 |
 | Video Generation                        | Per Second or Per Frame for Generation    |
 | Image Generation                        | Per Image                                 |
-| Agentic AI                              | Per Execution                             |
+| Agentic AI                              | Per Workflow Execution                    |
 | OCR / Document Analysis                 | Per Page Processed                        |
 | Classical Machine Learning              | Per Inference                             |
 | Machine Translation                     | Per Character Translated                  |
