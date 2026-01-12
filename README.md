@@ -14,8 +14,8 @@ We will develop a methodology for calculating the carbon emissions rate (SCI sco
 
 The project is led by:
 
-* [Navveen Balani (Accenture) @navveenb
-* [Henry Richardson (WattTime) @Henry-WattTime
+* Navveen Balani (Accenture) @navveenb
+* Henry Richardson (WattTime) @Henry-WattTime
 
 ## Status
 The SC ratified this project for public review on November 20th. 
