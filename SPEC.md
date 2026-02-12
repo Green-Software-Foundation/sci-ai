@@ -43,6 +43,9 @@ This specification covers a broad spectrum of AI systems, including classical ma
   - Music Generation
   - Code Generation
 - Agentic AI (Autonomous Decision-Making)
+  - Planning & Reasoning
+  - Tool Use, Orchestration & API Integration
+  - World Models (Environment Simulation & Planning)
 
 ## 3. Normative References
 
