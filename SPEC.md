@@ -158,12 +158,12 @@ Systems used in the Inception stage SHALL be included in the Provider SCI calcul
 All carbon emissions associated with systems used in the Design and Development stage SHALL be included in the Provider SCI calculation, including:
 - Data collection, preprocessing, and cleaning systems
 - Synthetic data generation
-- Compute, storage, and networking resources for model training
+- Compute, storage, and networking resources for model training stages (including, but not limited to, pre-training, mid-training and post-training)
 - Distributed training infrastructure
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate runs, and early stopping phases. 
+Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate & test runs, and early stopping phases. 
 
 ### 7.3 Deployment (Provider)
 
