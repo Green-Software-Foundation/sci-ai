@@ -89,24 +89,29 @@ T.8
 **FLOP (Floating Point Operation)**  
 Basic computational operation used as a measure of computational work in AI systems
 
-## 5. AI Lifecycle Stages
-For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
-
+## 5. AI lifecycle stages
+ 
+For the purposes of measuring carbon emissions, the AI lifecycle is divided into the following stages.
+ 
 ### 5.1 Inception
+ 
 The Inception stage involves defining the AI problem, assessing whether AI is the appropriate solution, engaging with end-users, and establishing performance objectives and computational constraints.
-
-### 5.2 Design and Development
+ 
+### 5.2 Design and development
+ 
 The Design and Development stage includes data collection from various sources, preprocessing (cleaning and normalizing), generating synthetic data when appropriate to reduce the need for excessive data collection, model selection, feature engineering, distributed training setup, evaluation metric definition, resource allocation, benchmarking, and computational resource optimization.
-
+ 
 ### 5.3 Deployment
+ 
 The Deployment stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
-
-### 5.4 Operation and Monitoring
-The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
-
-### 5.5 End of Life
-The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
-
+ 
+### 5.4 Operation and monitoring
+ 
+The Operation and Monitoring stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
+ 
+### 5.5 Retirement
+ 
+The Retirement stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
 ## 6. Persona-Based Software Boundary Definition
 
 The SCI for AI specification defines boundaries based on two primary personas, each with different spheres of control and agency over the AI system's carbon footprint.
