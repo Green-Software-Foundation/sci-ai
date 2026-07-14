@@ -13,9 +13,11 @@ This specification aims to:
 - Incentivize carbon efficiency improvements across the AI lifecycle
 
 ## 2. Scope
-
-This specification covers a broad spectrum of AI systems, including classical machine learning, generative AI, and agentic AI, and is designed to support current and future developments in the field.
-
+ 
+This document specifies a method for measuring, calculating, and reporting the carbon intensity of artificial intelligence (AI) systems. It applies to a broad range of AI system types, including classical machine learning, generative AI, and agentic AI, and is intended to remain applicable as new AI paradigms and architectures emerge.
+ 
+The AI system types addressed by this document are grouped as follows.
+ 
 ### 2.1 AI Paradigms (Foundational Approaches)
 - Machine Learning (ML)
   - Supervised Learning
