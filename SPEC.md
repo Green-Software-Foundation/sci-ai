@@ -44,10 +44,13 @@ This specification covers a broad spectrum of AI systems, including classical ma
   - Code Generation
 - Agentic AI (Autonomous Decision-Making)
 
-## 3. Normative References
-
-The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document:
-- ISO/IEC 21031:2024 – Information technology — Software Carbon Intensity (SCI) specification
+## 3. Normative references
+ 
+The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+ 
+- ISO/IEC 21031:2024, Information technology — Software Carbon Intensity (SCI) specification
+> **Open item for working group — not yet incorporated above:**
+> The document defines several concepts (embodied carbon, FLOPs, data centre operational metrics) that other ISO/IEC standards already cover normatively — for example ISO/IEC 30134 (data centre KPIs) or ISO 14064 (GHG quantification). If any of those are relied on for definitions or methodology elsewhere in the document, they should be added here as normative references rather than left as background knowledge. I haven't added any since I don't know which, if any, the group intends to invoke — flagging it as a question rather than guessing.
 
 ## 4. Terms and Definitions
 
