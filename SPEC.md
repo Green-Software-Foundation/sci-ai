@@ -242,94 +242,81 @@ An organization training a language model might report:
 
 These values reflect respective gains from switching to energy-efficient hardware, curating training datasets, and pruning inactive model weights.
 
-## 9. Implementation Examples
-
-This section provides examples of how to apply the SCI for AI specification in real-world scenarios, demonstrating how to combine software boundaries and functional units to calculate meaningful SCI scores.
-
-### 9.1 Large Language Model (LLM) Example
-
+## 9. Implementation examples
+ 
+This section provides examples of how to apply this document in real-world scenarios, demonstrating how to combine software boundaries and functional units to calculate meaningful SCI scores.
+ 
+### 9.1 Large language model (LLM) example
+ 
 For a typical Large Language Model service, two separate SCI scores should be calculated and reported:
-
-#### 9.1.1 Consumer SCI Calculation
-
+ 
+#### 9.1.1 Consumer SCI calculation
+ 
 **Functional Unit**: Per Token
-
+ 
 **Boundary**: Operation and Monitoring (inference services, API infrastructure, monitoring systems)
-
+ 
 **Calculation Method**:
+ 
 1. Measure all operational carbon within the Consumer boundary over a defined period (e.g., one week):
    - Carbon emitted of inference servers
    - Carbon emitted of API gateways and load balancers
    - Carbon emitted of monitoring and observability systems
    - Carbon emitted of caching and data storage
 2. Calculate embodied carbon for all hardware within the Consumer boundary over the defined period.
-3. Sum operational and embodied emissions to get total Consumer carbon (C)
-4. Count the total number of tokens processed during the same period (R)
-5. Calculate Consumer SCI: `SCI = C / R`
-
-**Example**:
-- Total Consumer operational carbon: 5,000 kg CO₂e/week
-- Total Consumer embodied carbon: 1,500 kg CO₂e/week
-- Total tokens processed: 50 billion tokens/week
-- Consumer SCI = 6,500 kg CO₂e / 50 billion tokens = 130 kg CO₂e/billion tokens
-
-#### 9.1.2 Provider SCI Calculation
-
+3. Sum operational and embodied emissions to get total Consumer carbon (C).
+4. Count the total number of tokens processed during the same period (R).
+5. Calculate Consumer SCI: `SCI = C / R`.
+EXAMPLE   Total Consumer operational carbon of 5,000 kg CO₂e/week plus total Consumer embodied carbon of 1,500 kg CO₂e/week, divided by 50 billion tokens processed/week, gives a Consumer SCI of 6,500 kg CO₂e ÷ 50 billion tokens = 130 kg CO₂e/billion tokens.
+ 
+#### 9.1.2 Provider SCI calculation
+ 
 **Functional Unit**: Per FLOP, Per Parameter, or Per Training Token (example uses Per FLOP)
-
-**Boundary**: Design and Development, Deployment, Retirement
-
+ 
+**Boundary**: Inception, Design and Development, Deployment, Retirement
+ 
 **Calculation Method**:
+ 
 1. Measure all operational carbon within the Provider boundary:
    - Carbon emitted during data collection and processing
    - Carbon emitted during model training
    - Carbon emitted during model optimization and testing
    - Carbon emitted during system integration
-2. Calculate embodied emissions for all hardware within the Provider boundary
-3. Sum operational and embodied carbon to get total Provider carbon emissions (C)
-4. Calculate the total number of FLOPs used (R)
-5. Calculate Provider SCI: `SCI = C / R`
-
-**Example**:
-- Total Provider operational emissions: 180,000 kg CO₂e
-- Total Provider embodied emissions: 20,000 kg CO₂e
-- Total FLOPs: 5 × 10²² FLOPs
-- Provider SCI = 200,000 kg CO₂e / (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs
-
+2. Calculate embodied emissions for all hardware within the Provider boundary.
+3. Sum operational and embodied carbon to get total Provider carbon emissions (C).
+4. Calculate the total number of FLOPs used (R).
+5. Calculate Provider SCI: `SCI = C / R`.
+EXAMPLE   Total Provider operational emissions of 180,000 kg CO₂e plus total Provider embodied emissions of 20,000 kg CO₂e, divided by 5 × 10²² FLOPs used, gives a Provider SCI of 200,000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs.
+ 
 #### 9.1.3 Reporting
-
+ 
 For an LLM the following SCI values can be reported:
-- **Consumer SCI**: 0.13 g CO₂e/million tokens
-- **Provider SCI**: 4 g CO₂e/10¹⁵ FLOPs
-
-### 9.2 Computer Vision Model Example
-
+ 
+- Consumer SCI: 130 g CO₂e/million tokens
+- Provider SCI: 4 g CO₂e/10¹⁵ FLOPs
+### 9.2 Computer vision model example
+ 
 For a computer vision model used for image classification:
-
-#### 9.2.1 Consumer SCI Calculation
-
+ 
+#### 9.2.1 Consumer SCI calculation
+ 
 **Functional Unit**: Per Inference
-
+ 
 **Boundary**: Operation and Monitoring
-
-**Example**:
-- Total Consumer emissions: 3,200 kg CO₂e/month
-- Total inferences: 40 million/month
-- Consumer SCI = 0.08 g CO₂e/inference
-
-#### 9.2.2 Provider SCI Calculation
-
+ 
+EXAMPLE   Total Consumer emissions of 3,200 kg CO₂e/month divided by 40 million inferences/month gives a Consumer SCI of 0.08 g CO₂e/inference.
+ 
+#### 9.2.2 Provider SCI calculation
+ 
 **Functional Unit**: Per Parameter
-
+ 
 **Boundary**: Inception, Design and Development, Deployment, Retirement
-
-**Example**:
-- Total Provider emissions: 75,000 kg CO₂e
-- Total parameters: 2.5 billion
-- Provider SCI = 3000 kg CO₂e/billion parameters
-
+ 
+EXAMPLE   Total Provider emissions of 75,000 kg CO₂e divided by 2.5 billion parameters gives a Provider SCI of 75,000 kg CO₂e ÷ 2.5 billion parameters = 30,000 kg CO₂e/billion parameters.
+ 
 #### 9.2.3 Reporting
-
+ 
 For a computer vision model the following SCI values can be reported:
-- **Consumer SCI**: 0.08 g CO₂e/inference
-- **Provider SCI**: 30 kg CO₂e/billion parameters
+ 
+- Consumer SCI: 0.08 g CO₂e/inference
+- Provider SCI: 30,000 kg CO₂e/billion parameters
