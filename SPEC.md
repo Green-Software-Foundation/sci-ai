@@ -57,7 +57,6 @@ ISO and IEC maintain terminological databases for use in standardization at the 
  
 - ISO Online browsing platform: available at https://www.iso.org/obp
 - IEC Electropedia: available at http://www.electropedia.org/
-
 **4.1**
 **functional unit**
 quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
@@ -92,6 +91,18 @@ individual, adjustable value that defines a part of an AI model's structure and 
 **floating point operation**
 **FLOP**
 basic computational operation used as a measure of computational work in AI systems
+ 
+**4.9**
+**gross value**
+total quantity of a metric reported without adjustment for actual usage or contribution
+ 
+Note 1 to entry: Examples include total parameters in a model, total tokens in a raw training dataset, or total theoretical FLOPs.
+ 
+**4.10**
+**effective value**
+quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
+ 
+Note 1 to entry: Examples include active parameters used per inference for sparse models, deduplicated or curated tokens, or utilized FLOPs during computation.
 
 ## 5. AI Lifecycle Stages
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
