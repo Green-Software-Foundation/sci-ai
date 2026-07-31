@@ -90,21 +90,17 @@ individual, adjustable value that defines a part of an AI model's structure and 
  
 **4.8**
 **floating point operation**
-**FLOP**
+**(FLOP)**
 basic computational operation used as a measure of computational work in AI systems
  
 **4.9**
 **gross value**
 total quantity of a metric reported without adjustment for actual usage or contribution
  
-Examples include total parameters in a model, total tokens in a raw training dataset, or total theoretical FLOPs.
- 
 **4.10**
 **effective value**
 quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
  
-Examples include active parameters used per inference for sparse models, deduplicated or curated tokens, or utilized FLOPs during computation.
-
 ## 5. AI Lifecycle Stages
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
 
