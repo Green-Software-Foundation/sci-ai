@@ -203,7 +203,7 @@ NOTE   Where an AI service involves multiple model calls, tool invocations, or s
  
 ### 8.2 Provider functional units
  
-Provider functional units shall align with one of the following metrics to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
+Provider functional units shall align with one of the following metrics, in table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
  
 **Table 2 — Provider functional units and efficiency focus**
  
