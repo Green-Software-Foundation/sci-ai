@@ -57,6 +57,7 @@ ISO and IEC maintain terminological databases for use in standardization at the 
  
 - ISO Online browsing platform: available at https://www.iso.org/obp
 - IEC Electropedia: available at http://www.electropedia.org/
+
 **4.1**
 **functional unit**
 quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
