@@ -45,10 +45,11 @@ The AI system types addressed by this document are grouped as follows.
   - Code Generation
 - Agentic AI (Autonomous Decision-Making)
 
-## 3. Normative References
-
-The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document:
-- ISO/IEC 21031:2024 – Information technology — Software Carbon Intensity (SCI) specification
+## 3. Normative references
+ 
+The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+ 
+- ISO/IEC 21031:2024, Information technology — Software Carbon Intensity (SCI) specification
 
 ## 4. Terms and Definitions
 
