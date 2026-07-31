@@ -2,15 +2,14 @@
 
 ## 1. Introduction
 
-This specification extends the Software Carbon Intensity (SCI) methodology to the unique characteristics of Artificial Intelligence (AI) systems. It provides a standardized method for measuring and reporting the carbon emissions associated with AI throughout its lifecycle.
+This document extends the Software Carbon Intensity (SCI) methodology specified in ISO/IEC 21031:2024 to address the distinctive architecture, resource requirements, and operational patterns of artificial intelligence (AI) systems. It provides a standardized method for measuring and reporting the carbon emissions associated with AI systems throughout their lifecycle.
 
-The SCI for AI specification builds upon the core principles established in ISO/IEC 21031:2024 while adding considerations specific to AI systems, including their distinctive architecture, resource requirements, and operational patterns.
+This document is intended to:
 
-This specification aims to:
-- Provide a consistent framework for measuring the carbon footprint of AI systems
-- Enable meaningful comparisons between different AI implementations
-- Guide practitioners in making environmentally responsible decisions in AI development and deployment
-- Incentivize carbon efficiency improvements across the AI lifecycle
+- provide a consistent framework for measuring the carbon footprint of AI systems;
+- enable meaningful comparison between different AI implementations;
+- guide practitioners in making environmentally responsible decisions in AI development and deployment;
+- incentivize carbon efficiency improvements across the AI lifecycle.
 
 ## 2. Scope
 
@@ -158,12 +157,12 @@ Systems used in the Inception stage SHALL be included in the Provider SCI calcul
 All carbon emissions associated with systems used in the Design and Development stage SHALL be included in the Provider SCI calculation, including:
 - Data collection, preprocessing, and cleaning systems
 - Synthetic data generation
-- Compute, storage, and networking resources for model training
+- Compute, storage, and networking resources for model training stages (including, but not limited to, pre-training, mid-training and post-training)
 - Distributed training infrastructure
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate runs, and early stopping phases. 
+Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate & test runs, and early stopping phases. 
 
 ### 7.3 Deployment (Provider)
 
