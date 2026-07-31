@@ -224,6 +224,7 @@ Providers SHALL clearly state:
 - Any key strategies, assumptions, or methodologies that are either material to the reported results or potentially valuable for others to adopt (e.g., pruning, sparse activation, synthetic data use)
 
 > **Explanation**:  
+
 > - **Gross values** refer to total quantities without adjustment — e.g., total parameters in the model, total tokens in a raw dataset, or total theoretical FLOPs.  
 > - **Effective values** account for actual usage or meaningful contributions — e.g., active parameters used per inference (for sparse models), deduplicated or curated tokens, or utilized FLOPs during computation.  
 >  
@@ -267,6 +268,7 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 3. Sum operational and embodied emissions to get total Consumer carbon (C).
 4. Count the total number of tokens processed during the same period (R).
 5. Calculate Consumer SCI: `SCI = C / R`.
+
 EXAMPLE   Total Consumer operational carbon of 5,000 kg CO₂e/week plus total Consumer embodied carbon of 1,500 kg CO₂e/week, divided by 50 billion tokens processed/week, gives a Consumer SCI of 6,500 kg CO₂e ÷ 50 billion tokens = 130 kg CO₂e/billion tokens.
  
 #### 9.1.2 Provider SCI calculation
@@ -286,6 +288,7 @@ EXAMPLE   Total Consumer operational carbon of 5,000 kg CO₂e/week plus total C
 3. Sum operational and embodied carbon to get total Provider carbon emissions (C).
 4. Calculate the total number of FLOPs used (R).
 5. Calculate Provider SCI: `SCI = C / R`.
+
 EXAMPLE   Total Provider operational emissions of 180,000 kg CO₂e plus total Provider embodied emissions of 20,000 kg CO₂e, divided by 5 × 10²² FLOPs used, gives a Provider SCI of 200,000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs.
  
 #### 9.1.3 Reporting
@@ -294,6 +297,7 @@ For an LLM the following SCI values can be reported:
  
 - Consumer SCI: 130 g CO₂e/million tokens
 - Provider SCI: 4 g CO₂e/10¹⁵ FLOPs
+
 ### 9.2 Computer vision model example
  
 For a computer vision model used for image classification:
