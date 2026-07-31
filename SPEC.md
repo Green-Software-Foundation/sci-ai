@@ -97,7 +97,7 @@ basic computational operation used as a measure of computational work in AI syst
 **gross value**
 total quantity of a metric reported without adjustment for actual usage or contribution
  
-Note 1 to entry: Examples include total parameters in a model, total tokens in a raw training dataset, or total theoretical FLOPs.
+Examples include total parameters in a model, total tokens in a raw training dataset, or total theoretical FLOPs.
  
 **4.10**
 **effective value**
