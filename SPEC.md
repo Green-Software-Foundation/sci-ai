@@ -62,7 +62,7 @@ ISO and IEC maintain terminological databases for use in standardization at the 
 **functional unit**
 quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
  
-Note 1 to entry: This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
+This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
  
 **4.2**
 **consumer**
@@ -103,7 +103,7 @@ Note 1 to entry: Examples include total parameters in a model, total tokens in a
 **effective value**
 quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
  
-Note 1 to entry: Examples include active parameters used per inference for sparse models, deduplicated or curated tokens, or utilized FLOPs during computation.
+Examples include active parameters used per inference for sparse models, deduplicated or curated tokens, or utilized FLOPs during computation.
 
 ## 5. AI Lifecycle Stages
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
