@@ -203,7 +203,7 @@ NOTE   Where an AI service involves multiple model calls, tool invocations, or s
  
 ### 8.2 Provider functional units
  
-Provider functional units shall align with one of the following metrics, in table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
+Provider functional units shall align with one of the following metrics shown in table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
  
 **Table 2 — Provider functional units and efficiency focus**
  
@@ -218,6 +218,7 @@ Provider functional units shall align with one of the following metrics, in tabl
 - Per FLOP is best suited for evaluating compute efficiency and incentivizes algorithmic improvements and optimized hardware utilization.
 - Per Training Token aligns with data-centric strategies and encourages deduplication, curation, and synthetic augmentation.
 - Per Parameter emphasizes compact, purposeful model designs, especially when adjusted for activation sparsity.
+
 #### 8.2.2 Reporting expectations
  
 Providers shall clearly state:
