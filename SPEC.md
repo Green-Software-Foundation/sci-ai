@@ -23,7 +23,7 @@ This specification covers a broad spectrum of AI systems, including classical ma
   - Reinforcement Learning
   - Deep Learning
 - Symbolic AI (Classical AI)
-- Probabilistic & Bayesian AI
+- Probabilistic and Bayesian AI
 - Evolutionary Algorithms
 - Fuzzy Logic
 - Hybrid AI (combining multiple paradigms)
@@ -120,14 +120,14 @@ The SCI for AI specification defines boundaries based on two primary personas, e
 
 The Consumer boundary SHALL include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
 
-- API & Inference
+- API and Inference
 - Orchestration
 - Scaling
-- Observability & Monitoring
-- Data & Feature Management
-- Storage & Artifacts
-- UX & Client-side
-- Model Tool & Service Connectors
+- Observability and Monitoring
+- Data and Feature Management
+- Storage and Artifacts
+- UX and Client-side
+- Model Tool and Service Connectors
   
 
 ### 6.2 Provider Boundary
@@ -139,17 +139,17 @@ The Provider boundary SHALL include all components related to the following life
 - Retirement
 
 This includes:
-- Project Scoping & Planning Systems
+- Project Scoping and Planning Systems
 - Data Collection Systems
-- Data Preprocessing & Cleaning Systems
+- Data Preprocessing and Cleaning Systems
 - Synthetic Data Generation
-- Model Development & Training Infrastructure
+- Model Development and Training Infrastructure
 - Feature Engineering Systems
 - Distributed Training Systems
-- Model Evaluation & Benchmarking
-- Optimization & Efficiency Analysis
-- System Integration & Orchestration
-- Testing & Validation Systems
+- Model Evaluation and Benchmarking
+- Optimization and Efficiency Analysis
+- System Integration and Orchestration
+- Testing and Validation Systems
 - Model Tool Systems
 
 ## 7. AI Life Cycle Coverage
