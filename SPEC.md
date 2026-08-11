@@ -234,8 +234,11 @@ This flexible approach allows providers to transparently highlight their optimiz
  
 Providers should report multiple functional units where feasible, to give a comprehensive view of efficiency across compute, data, and model design dimensions.
  
-EXAMPLE   An organization training a language model might report a carbon intensity of 0.45 gCO₂e per 10¹² FLOPs, 0.18 gCO₂e per 1,000 training tokens, and 20 kgCO₂e per billion parameters — reflecting, respectively, gains from switching to energy-efficient hardware, curating training datasets, and pruning inactive model weights.
-
+EXAMPLE   An organization training a language model might report:
+- 0,45 gCO₂e per 10¹² FLOPs, reflecting gains from switching to energy-efficient hardware;
+- 0,18 gCO₂e per 1 000 training tokens, reflecting curation of the training dataset; and
+- 20 kgCO₂e per billion parameters, reflecting pruning of inactive model weights.
+  
 ## 9. Implementation Examples
 
 This section provides examples of how to apply the SCI for AI specification in real-world scenarios, demonstrating how to combine software boundaries and functional units to calculate meaningful SCI scores.
