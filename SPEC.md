@@ -51,46 +51,58 @@ The following documents are referred to in the text in such a way that some or a
  
 - ISO/IEC 21031:2024, Information technology — Software Carbon Intensity (SCI) specification
 
-## 4. Terms and Definitions
-
+## 4. Terms and definitions
+ 
 For the purposes of this document, the terms and definitions given in ISO/IEC 21031:2024 and the following apply.
-
+ 
 ISO and IEC maintain terminological databases for use in standardization at the following addresses:
--	ISO Online browsing platform: available at https://www.iso.org/obp
--	IEC Electropedia: available at http://www.electropedia.org/
+ 
+- ISO Online browsing platform: available at https://www.iso.org/obp
+- IEC Electropedia: available at http://www.electropedia.org/
 
-T.1  
-**Functional Unit**  
-Quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
-
-T.2  
-**Consumer**  
-Entity that uses AI services and pays for functional units of AI
-
-T.3  
-**Provider**  
-Entity that develops and delivers AI services, selling functional units of AI
-
-T.4
-**Model Training**
-Process of developing an AI model by exposing it to data and optimizing its parameters to perform a specific task(s)
-
-T.5  
-**Inference**  
-Process of using a trained AI model to make predictions or generate outputs based on input data
-
-T.6
-**Token**
-Atomic unit of text processing in language models, typically representing parts of words, or characters
-
-T.7  
-**Parameter**  
-Individual, adjustable value that defines a part of an AI model's structure and behavior
-
-T.8  
-**FLOP (Floating Point Operation)**  
-Basic computational operation used as a measure of computational work in AI systems
-
+**4.1**
+**functional unit**
+quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
+ 
+This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
+ 
+**4.2**
+**consumer**
+entity that uses AI services and pays for functional units of AI
+ 
+**4.3**
+**provider**
+entity that develops and delivers AI services, selling functional units of AI
+ 
+**4.4**
+**model training**
+process of developing an AI model by exposing it to data and optimizing its parameters to perform specific tasks
+ 
+**4.5**
+**inference**
+process of using a trained AI model to make predictions or generate outputs based on input data
+ 
+**4.6**
+**token**
+atomic unit of text processing in language models, typically representing parts of words, or characters
+ 
+**4.7**
+**parameter**
+individual, adjustable value that defines a part of an AI model's structure and behavior
+ 
+**4.8**
+**floating point operation**
+**(FLOP)**
+basic computational operation used as a measure of computational work in AI systems
+ 
+**4.9**
+**gross value**
+total quantity of a metric reported without adjustment for actual usage or contribution
+ 
+**4.10**
+**effective value**
+quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
+ 
 ## 5. AI Lifecycle Stages
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
 
