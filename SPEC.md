@@ -165,15 +165,16 @@ This includes:
 - Testing and Validation Systems
 - Model Tool Systems
 
-## 7. AI Life Cycle Coverage
-
+## 7. AI lifecycle coverage
+ 
 ### 7.1 Inception (Provider)
-
-Systems used in the Inception stage SHALL be included in the Provider SCI calculation when material; they MAY be included when not material.
-
-### 7.2 Design and Development (Provider)
-
-All carbon emissions associated with systems used in the Design and Development stage SHALL be included in the Provider SCI calculation, including:
+ 
+Systems used in the Inception stage shall be included in the Provider SCI calculation when material; they may be included when not material.
+ 
+### 7.2 Design and development (Provider)
+ 
+All carbon emissions associated with systems used in the Design and Development stage shall be included in the Provider SCI calculation, including:
+ 
 - Data collection, preprocessing, and cleaning systems
 - Synthetic data generation
 - Compute, storage, and networking resources for model training stages (including, but not limited to, pre-training, mid-training and post-training)
@@ -181,19 +182,19 @@ All carbon emissions associated with systems used in the Design and Development 
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases. 
-
+Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases.
+ 
 ### 7.3 Deployment (Provider)
-
-All carbon emissions associated with Deployment SHALL be included in the Provider SCI calculation.
-
-### 7.4 Operation and Monitoring (Consumer)
-
-All carbon emissions associated with systems used in the Operation and Monitoring stage SHALL be included in the Consumer SCI calculation.
-
+ 
+All carbon emissions associated with systems used in the Deployment stage shall be included in the Provider SCI calculation.
+ 
+### 7.4 Operation and monitoring (Consumer)
+ 
+All carbon emissions associated with systems used in the Operation and Monitoring stage shall be included in the Consumer SCI calculation.
+ 
 ### 7.5 Retirement (Consumer and Provider)
-
-Systems used in the Retirement stage SHALL be included in the SCI calculation when material; they MAY be included when not material.
+ 
+Systems used in the Retirement stage shall be included in the SCI calculation when material; they may be included when not material.
 
 ## 8. Functional Units
 
