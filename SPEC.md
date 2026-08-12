@@ -121,44 +121,43 @@ The Runtime Operations stage includes model deployment for inference, orchestrat
 ### 5.5 End of Life
 The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
 
-## 6. Persona-Based Software Boundary Definition
-
-The SCI for AI specification defines boundaries based on two primary personas, each with different spheres of control and agency over the AI system's carbon footprint.
-
-### 6.1 Consumer Boundary
-
-The Consumer boundary SHALL include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
-
-- API & Inference
+## 6. Persona-based software boundary definition
+ 
+This document defines boundaries based on two primary personas, each with different spheres of control and agency over the AI system's carbon footprint.
+ 
+### 6.1 Consumer boundary
+ 
+The Consumer boundary shall include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
+ 
+- API and Inference
 - Orchestration
 - Scaling
-- Observability & Monitoring
-- Data & Feature Management
-- Storage & Artifacts
-- UX & Client-side
-- Model Tool & Service Connectors
-  
+- Observability and Monitoring
+- Data and Feature Management
+- Storage and Artifacts
+- UX and Client-side
+- Model Tool and Service Connectors
 
-### 6.2 Provider Boundary
-
-The Provider boundary SHALL include all components related to the following lifecycle stages:
+### 6.2 Provider boundary
+ 
+The Provider boundary shall include all components related to the following lifecycle stages:
 - Inception
 - Design and Development
 - Deployment
 - Retirement
 
 This includes:
-- Project Scoping & Planning Systems
+- Project Scoping and Planning Systems
 - Data Collection Systems
-- Data Preprocessing & Cleaning Systems
+- Data Preprocessing and Cleaning Systems
 - Synthetic Data Generation
-- Model Development & Training Infrastructure
+- Model Development and Training Infrastructure
 - Feature Engineering Systems
 - Distributed Training Systems
-- Model Evaluation & Benchmarking
-- Optimization & Efficiency Analysis
-- System Integration & Orchestration
-- Testing & Validation Systems
+- Model Evaluation and Benchmarking
+- Optimization and Efficiency Analysis
+- System Integration and Orchestration
+- Testing and Validation Systems
 - Model Tool Systems
 
 ## 7. AI Life Cycle Coverage
