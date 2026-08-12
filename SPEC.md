@@ -2,20 +2,21 @@
 
 ## 1. Introduction
 
-This specification extends the Software Carbon Intensity (SCI) methodology to the unique characteristics of Artificial Intelligence (AI) systems. It provides a standardized method for measuring and reporting the carbon emissions associated with AI throughout its lifecycle.
+This document extends the Software Carbon Intensity (SCI) methodology specified in ISO/IEC 21031:2024 to address the distinctive architecture, resource requirements, and operational patterns of artificial intelligence (AI) systems. It provides a standardized method for measuring and reporting the carbon emissions associated with AI systems throughout their lifecycle.
 
-The SCI for AI specification builds upon the core principles established in ISO/IEC 21031:2024 while adding considerations specific to AI systems, including their distinctive architecture, resource requirements, and operational patterns.
+This document is intended to:
 
-This specification aims to:
-- Provide a consistent framework for measuring the carbon footprint of AI systems
-- Enable meaningful comparisons between different AI implementations
-- Guide practitioners in making environmentally responsible decisions in AI development and deployment
-- Incentivize carbon efficiency improvements across the AI lifecycle
+- provide a consistent framework for measuring the carbon footprint of AI systems;
+- enable meaningful comparison between different AI implementations;
+- guide practitioners in making environmentally responsible decisions in AI development and deployment;
+- incentivize carbon efficiency improvements across the AI lifecycle.
 
 ## 2. Scope
-
-This specification covers a broad spectrum of AI systems, including classical machine learning, generative AI, and agentic AI, and is designed to support current and future developments in the field.
-
+ 
+This document specifies a method for measuring, calculating, and reporting the carbon intensity of artificial intelligence (AI) systems. It applies to a broad range of AI system types, including classical machine learning, generative AI, and agentic AI, and is intended to remain applicable as new AI paradigms and architectures emerge.
+ 
+The AI system types addressed by this document are grouped as follows.
+ 
 ### 2.1 AI Paradigms (Foundational Approaches)
 - Machine Learning (ML)
   - Supervised Learning
@@ -44,77 +45,94 @@ This specification covers a broad spectrum of AI systems, including classical ma
   - Code Generation
 - Agentic AI (Autonomous Decision-Making)
 
-## 3. Normative References
+## 3. Normative references
+ 
+The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+ 
+- ISO/IEC 21031:2024, Information technology — Software Carbon Intensity (SCI) specification
 
-The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document:
-- ISO/IEC 21031:2024 – Information technology — Software Carbon Intensity (SCI) specification
-
-## 4. Terms and Definitions
-
+## 4. Terms and definitions
+ 
 For the purposes of this document, the terms and definitions given in ISO/IEC 21031:2024 and the following apply.
-
+ 
 ISO and IEC maintain terminological databases for use in standardization at the following addresses:
--	ISO Online browsing platform: available at https://www.iso.org/obp
--	IEC Electropedia: available at http://www.electropedia.org/
+ 
+- ISO Online browsing platform: available at https://www.iso.org/obp
+- IEC Electropedia: available at http://www.electropedia.org/
 
-T.1  
-**Functional Unit**  
-Quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
-
-T.2  
-**Consumer**  
-Entity that uses AI services and pays for functional units of AI
-
-T.3  
-**Provider**  
-Entity that develops and delivers AI services, selling functional units of AI
-
-T.4
-**Model Training**
-Process of developing an AI model by exposing it to data and optimizing its parameters to perform a specific task(s)
-
-T.5  
-**Inference**  
-Process of using a trained AI model to make predictions or generate outputs based on input data
-
-T.6
-**Token**
-Atomic unit of text processing in language models, typically representing parts of words, or characters
-
-T.7  
-**Parameter**  
-Individual, adjustable value that defines a part of an AI model's structure and behavior
-
-T.8  
-**FLOP (Floating Point Operation)**  
-Basic computational operation used as a measure of computational work in AI systems
-
+**4.1**
+**functional unit**
+quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
+ 
+This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
+ 
+**4.2**
+**consumer**
+entity that uses AI services and pays for functional units of AI
+ 
+**4.3**
+**provider**
+entity that develops and delivers AI services, selling functional units of AI
+ 
+**4.4**
+**model training**
+process of developing an AI model by exposing it to data and optimizing its parameters to perform specific tasks
+ 
+**4.5**
+**inference**
+process of using a trained AI model to make predictions or generate outputs based on input data
+ 
+**4.6**
+**token**
+atomic unit of text processing in language models, typically representing parts of words, or characters
+ 
+**4.7**
+**parameter**
+individual, adjustable value that defines a part of an AI model's structure and behavior
+ 
+**4.8**
+**floating point operation**
+**(FLOP)**
+basic computational operation used as a measure of computational work in AI systems
+ 
+**4.9**
+**gross value**
+total quantity of a metric reported without adjustment for actual usage or contribution
+ 
+**4.10**
+**effective value**
+quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
+ 
 ## 5. AI Lifecycle Stages
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
 
 ### 5.1 Inception
+ 
 The Inception stage involves defining the AI problem, assessing whether AI is the appropriate solution, engaging with end-users, and establishing performance objectives and computational constraints.
-
-### 5.2 Design and Development
+ 
+### 5.2 Design and development
+ 
 The Design and Development stage includes data collection from various sources, preprocessing (cleaning and normalizing), generating synthetic data when appropriate to reduce the need for excessive data collection, model selection, feature engineering, distributed training setup, evaluation metric definition, resource allocation, benchmarking, and computational resource optimization.
-
+ 
 ### 5.3 Deployment
+ 
 The Deployment stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
 
 ### 5.4 Operation and Monitoring
 The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
 
-### 5.5 End of Life
-The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
+### 5.5 Retirement
+ 
+The Retirement stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
 
-## 6. Persona-Based Software Boundary Definition
-
-The SCI for AI specification defines boundaries based on two primary personas, each with different spheres of control and agency over the AI system's carbon footprint.
-
-### 6.1 Consumer Boundary
-
-The Consumer boundary SHALL include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
-
+## 6. Persona-based software boundary definition
+ 
+This document defines boundaries based on two primary personas, each with different spheres of control and agency over the AI system's carbon footprint.
+ 
+### 6.1 Consumer boundary
+ 
+The Consumer boundary shall include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
+ 
 - API and Inference
 - Orchestration
 - Scaling
@@ -122,12 +140,12 @@ The Consumer boundary SHALL include all components related to the Operation and 
 - Data and Feature Management
 - Storage and Artifacts
 - UX and Client-side
-- Model Tool and Service Connectors
-  
+- Model Tool and Service Connectors  
 
-### 6.2 Provider Boundary
+### 6.2 Provider boundary
+ 
+The Provider boundary shall include all components related to the following lifecycle stages:
 
-The Provider boundary SHALL include all components related to the following lifecycle stages:
 - Inception
 - Design and Development
 - Deployment
@@ -147,15 +165,16 @@ This includes:
 - Testing and Validation Systems
 - Model Tool Systems
 
-## 7. AI Life Cycle Coverage
-
+## 7. AI lifecycle coverage
+ 
 ### 7.1 Inception (Provider)
-
-Systems used in the Inception stage SHALL be included in the Provider SCI calculation when material; they MAY be included when not material.
-
-### 7.2 Design and Development (Provider)
-
-All carbon emissions associated with systems used in the Design and Development stage SHALL be included in the Provider SCI calculation, including:
+ 
+Systems used in the Inception stage shall be included in the Provider SCI calculation when material; they may be included when not material.
+ 
+### 7.2 Design and development (Provider)
+ 
+All carbon emissions associated with systems used in the Design and Development stage shall be included in the Provider SCI calculation, including:
+ 
 - Data collection, preprocessing, and cleaning systems
 - Synthetic data generation
 - Compute, storage, and networking resources for model training stages (including, but not limited to, pre-training, mid-training and post-training)
@@ -163,19 +182,19 @@ All carbon emissions associated with systems used in the Design and Development 
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases. 
-
+Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases.
+ 
 ### 7.3 Deployment (Provider)
-
-All carbon emissions associated with Deployment SHALL be included in the Provider SCI calculation.
-
-### 7.4 Operation and Monitoring (Consumer)
-
-All carbon emissions associated with systems used in the Operation and Monitoring stage SHALL be included in the Consumer SCI calculation.
-
+ 
+All carbon emissions associated with systems used in the Deployment stage shall be included in the Provider SCI calculation.
+ 
+### 7.4 Operation and monitoring (Consumer)
+ 
+All carbon emissions associated with systems used in the Operation and Monitoring stage shall be included in the Consumer SCI calculation.
+ 
 ### 7.5 Retirement (Consumer and Provider)
-
-Systems used in the Retirement stage SHALL be included in the SCI calculation when material; they MAY be included when not material.
+ 
+Systems used in the Retirement stage shall be included in the SCI calculation when material; they may be included when not material.
 
 ## 8. Functional units
  
