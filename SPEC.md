@@ -232,7 +232,7 @@ NOTE   Reporting effective values gives a more realistic picture of efficiency b
  
 This flexible approach allows providers to transparently highlight their optimization focus while avoiding misleading comparisons.
  
-Providers should report multiple functional units where feasible, to give a comprehensive view of efficiency across compute, data, and model design dimensions.
+Providers may report multiple functional units where feasible, to give a comprehensive view of efficiency across compute, data, and model design dimensions.
  
 EXAMPLE   An organization training a language model might report:
 - 0,45 gCO₂e per 10¹² FLOPs, reflecting gains from switching to energy-efficient hardware;
