@@ -270,10 +270,10 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 5. Calculate Consumer SCI: `SCI = C / R`.
 
 EXAMPLE
-- Total Consumer operational carbon: 5 000 kg CO₂e/week
-- Total Consumer embodied carbon: 1 500 kg CO₂e/week
+- Total Consumer operational carbon: 5,000 kg CO₂e/week
+- Total Consumer embodied carbon: 1,500 kg CO₂e/week
 - Total tokens processed: 50 billion tokens/week
-- Consumer SCI = 6 500 kg CO₂e ÷ 50 billion tokens = 130 kg CO₂e/billion tokens
+- Consumer SCI = 6,500 kg CO₂e ÷ 50 billion tokens = 130 kg CO₂e/billion tokens
  
 #### 9.1.2 Provider SCI calculation
  
@@ -294,10 +294,10 @@ EXAMPLE
 5. Calculate Provider SCI: `SCI = C / R`.
 
 EXAMPLE
-- Total Provider operational emissions: 180 000 kg CO₂e
-- Total Provider embodied emissions: 20 000 kg CO₂e
+- Total Provider operational emissions: 180,000 kg CO₂e
+- Total Provider embodied emissions: 20,000 kg CO₂e
 - Total FLOPs used: 5 × 10²² FLOPs
-- Provider SCI = 200 000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs
+- Provider SCI = 200,000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs
  
 #### 9.1.3 Reporting
  
@@ -317,9 +317,9 @@ For a computer vision model used for image classification:
 **Boundary**: Operation and Monitoring
  
 EXAMPLE
-- Total Consumer emissions: 3 200 kg CO₂e/month
+- Total Consumer emissions: 3,200 kg CO₂e/month
 - Total inferences: 40 million/month
-- Consumer SCI = 3 200 kg CO₂e ÷ 40 million inferences = 0.08 g CO₂e/inference
+- Consumer SCI = 3,200 kg CO₂e ÷ 40 million inferences = 0.08 g CO₂e/inference
  
 #### 9.2.2 Provider SCI calculation
  
@@ -328,13 +328,13 @@ EXAMPLE
 **Boundary**: Inception, Design and Development, Deployment, Retirement
  
 EXAMPLE
-- Total Provider emissions: 75 000 kg CO₂e
+- Total Provider emissions: 75,000 kg CO₂e
 - Total parameters: 2,5 billion
-- Provider SCI = 75 000 kg CO₂e ÷ 2.5 billion parameters = 30 000 kg CO₂e/billion parameters
+- Provider SCI = 75,000 kg CO₂e ÷ 2.5 billion parameters = 30,000 kg CO₂e/billion parameters
    
 #### 9.2.3 Reporting
  
 For a computer vision model the following SCI values can be reported:
  
 - Consumer SCI: 0.08 g CO₂e/inference
-- Provider SCI: 30 000 kg CO₂e/billion parameters
+- Provider SCI: 30,000 kg CO₂e/billion parameters
