@@ -1,6 +1,6 @@
 # Software Carbon Intensity for AI Specification
 
-## 1. Introduction
+## Introduction
 
 This document extends the Software Carbon Intensity (SCI) methodology specified in ISO/IEC 21031:2024 to address the distinctive architecture, resource requirements, and operational patterns of artificial intelligence (AI) systems. It provides a standardized method for measuring and reporting the carbon emissions associated with AI systems throughout their lifecycle.
 
@@ -11,13 +11,13 @@ This document is intended to:
 - guide practitioners in making environmentally responsible decisions in AI development and deployment;
 - incentivize carbon efficiency improvements across the AI lifecycle.
 
-## 2. Scope
- 
+## Scope
+
 This document specifies a method for measuring, calculating, and reporting the carbon intensity of artificial intelligence (AI) systems. It applies to a broad range of AI system types, including classical machine learning, generative AI, and agentic AI, and is intended to remain applicable as new AI paradigms and architectures emerge.
- 
+
 The AI system types addressed by this document are grouped as follows.
- 
-### 2.1 AI Paradigms (Foundational Approaches)
+
+### AI paradigms (foundational approaches)
 - Machine Learning (ML)
   - Supervised Learning
   - Unsupervised Learning
@@ -29,14 +29,14 @@ The AI system types addressed by this document are grouped as follows.
 - Fuzzy Logic
 - Hybrid AI (combining multiple paradigms)
 
-### 2.2 Application-Specific AI Solutions
+### Application-specific AI solutions
 - Predictive Analytics
 - Prescriptive Analytics
 - Computer Vision
 - Natural Language Processing (NLP)
 - Speech Recognition/Processing
 
-### 2.3 Emerging AI Technologies
+### Emerging AI technologies
 - Generative AI
   - Text Generation (e.g., LLMs)
   - Image Generation
@@ -45,94 +45,98 @@ The AI system types addressed by this document are grouped as follows.
   - Code Generation
 - Agentic AI (Autonomous Decision-Making)
 
-## 3. Normative references
- 
-The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
- 
-- ISO/IEC 21031:2024, Information technology — Software Carbon Intensity (SCI) specification
+## Normative references
 
-## 4. Terms and definitions
- 
-For the purposes of this document, the terms and definitions given in ISO/IEC 21031:2024 and the following apply.
- 
+The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.
+
+- ISO/IEC 5338:2023, Information technology — Artificial intelligence — AI system life cycle processes
+- ISO/IEC 21031:2024, Information technology — Software Carbon Intensity (SCI) specification
+- ISO/IEC 22989:2022, Information technology — Artificial intelligence — Artificial intelligence concepts and terminology
+
+## Terms and definitions
+
+For the purposes of this document, the terms and definitions given in ISO/IEC 21031:2024, ISO/IEC 22989:2022, and the following apply.
+
 ISO and IEC maintain terminological databases for use in standardization at the following addresses:
- 
+
 - ISO Online browsing platform: available at https://www.iso.org/obp
 - IEC Electropedia: available at http://www.electropedia.org/
 
-**4.1**
+T.1
 **functional unit**
 quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
- 
+
 This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
- 
-**4.2**
+
+T.2
 **consumer**
 entity that uses AI services and pays for functional units of AI
- 
-**4.3**
+
+T.3
 **provider**
 entity that develops and delivers AI services, selling functional units of AI
- 
-**4.4**
+
+T.4
 **model training**
 process of developing an AI model by exposing it to data and optimizing its parameters to perform specific tasks
- 
-**4.5**
+
+T.5
 **inference**
 process of using a trained AI model to make predictions or generate outputs based on input data
- 
-**4.6**
+
+T.6
 **token**
-atomic unit of text processing in language models, typically representing parts of words, or characters
- 
-**4.7**
+atomic unit of text processing in language models, typically representing parts of words or characters
+
+T.7
 **parameter**
 individual, adjustable value that defines a part of an AI model's structure and behavior
- 
-**4.8**
+
+T.8
 **floating point operation**
 **(FLOP)**
 basic computational operation used as a measure of computational work in AI systems
- 
-**4.9**
+
+T.9
 **gross value**
 total quantity of a metric reported without adjustment for actual usage or contribution
- 
-**4.10**
+
+T.10
 **effective value**
 quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
- 
-## 5. AI Lifecycle Stages
+
+## AI lifecycle stages
+
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
 
-### 5.1 Inception
- 
+### Inception
+
 The Inception stage involves defining the AI problem, assessing whether AI is the appropriate solution, engaging with end-users, and establishing performance objectives and computational constraints.
- 
-### 5.2 Design and development
- 
+
+### Design and development
+
 The Design and Development stage includes data collection from various sources, preprocessing (cleaning and normalizing), generating synthetic data when appropriate to reduce the need for excessive data collection, model selection, feature engineering, distributed training setup, evaluation metric definition, resource allocation, benchmarking, and computational resource optimization.
- 
-### 5.3 Deployment
- 
+
+### Deployment
+
 The Deployment stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
 
-### 5.4 Operation and Monitoring
-The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
+### Operation and monitoring
 
-### 5.5 Retirement
- 
+The Operation and Monitoring stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
+
+### Retirement
+
 The Retirement stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
 
-## 6. Persona-based software boundary definition
- 
+## Persona-based software boundary definition
+
 This document defines boundaries based on two primary personas, each with different spheres of control and agency over the AI system's carbon footprint.
- 
-### 6.1 Consumer boundary
- 
+
+### Consumer boundary
+
 The Consumer boundary shall include all components related to the Operation and Monitoring lifecycle stage, including but not limited to:
- 
+
 - API and Inference
 - Orchestration
 - Scaling
@@ -140,10 +144,10 @@ The Consumer boundary shall include all components related to the Operation and 
 - Data and Feature Management
 - Storage and Artifacts
 - UX and Client-side
-- Model Tool and Service Connectors  
+- Model Tool and Service Connectors
 
-### 6.2 Provider boundary
- 
+### Provider boundary
+
 The Provider boundary shall include all components related to the following lifecycle stages:
 
 - Inception
@@ -165,16 +169,16 @@ This includes:
 - Testing and Validation Systems
 - Model Tool Systems
 
-## 7. AI lifecycle coverage
- 
-### 7.1 Inception (Provider)
- 
+## AI lifecycle coverage
+
+### Inception (Provider)
+
 Systems used in the Inception stage shall be included in the Provider SCI calculation when material; they may be included when not material.
- 
-### 7.2 Design and development (Provider)
- 
+
+### Design and development (Provider)
+
 All carbon emissions associated with systems used in the Design and Development stage shall be included in the Provider SCI calculation, including:
- 
+
 - Data collection, preprocessing, and cleaning systems
 - Synthetic data generation
 - Compute, storage, and networking resources for model training stages (including, but not limited to, pre-training, mid-training and post-training)
@@ -183,29 +187,29 @@ All carbon emissions associated with systems used in the Design and Development 
 - Evaluation frameworks
 
 Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases.
- 
-### 7.3 Deployment (Provider)
- 
+
+### Deployment (Provider)
+
 All carbon emissions associated with systems used in the Deployment stage shall be included in the Provider SCI calculation.
- 
-### 7.4 Operation and monitoring (Consumer)
- 
+
+### Operation and monitoring (Consumer)
+
 All carbon emissions associated with systems used in the Operation and Monitoring stage shall be included in the Consumer SCI calculation.
- 
-### 7.5 Retirement (Consumer and Provider)
- 
+
+### Retirement (Consumer and Provider)
+
 Systems used in the Retirement stage shall be included in the SCI calculation when material; they may be included when not material.
 
-## 8. Functional units
- 
-### 8.1 Consumer functional units
- 
+## Functional units
+
+### Consumer functional units
+
 Consumer functional units represent the measurable unit of AI service consumption used to normalize carbon emissions within the Consumer boundary. The functional unit should align with how the AI service is delivered, consumed, or billed.
- 
+
 Table 1 provides suggested examples of commonly used functional units. Given the diversity of AI system types and consumption models, these examples are indicative and not exhaustive.
- 
+
 **Table 1 — Suggested consumer functional units by AI system type**
- 
+
 | AI System Type | Suggested Functional Unit |
 |---|---|
 | Large Language Models (LLMs) | Per Token |
@@ -217,63 +221,64 @@ Table 1 provides suggested examples of commonly used functional units. Given the
 | Machine Translation | Per Character Translated |
 | Speech Recognition | Per Second of Audio Processed |
 | Text-to-Speech | Per Character of Text Processed |
- 
+
 NOTE   Where an AI service involves multiple model calls, tool invocations, or service integrations, emissions should account for all triggered operations — including model executions, tool usage, retrieval steps, model-to-model exchanges, and any other impacts considered material.
- 
-### 8.2 Provider functional units
- 
-Provider functional units shall align with one of the following metrics shown in table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
- 
+
+### Provider functional units
+
+Provider functional units shall align with one of the following metrics shown in Table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies.
+
 **Table 2 — Provider functional units and efficiency focus**
- 
+
 | Functional Unit | Description | Efficiency Focus |
 |---|---|---|
 | Per FLOP | Carbon emissions per floating point operation | Algorithmic and hardware efficiency |
 | Per Training Token | Carbon emissions per token in training data | Data quality and curation efficiency |
-| Per Parameter | Carbon emissions per billion model parameters | Model architecture efficiency |
- 
-#### 8.2.1 Guidance on functional unit selection
- 
+| Per Billion Parameters | Carbon emissions per billion model parameters | Model architecture efficiency |
+
+#### Guidance on functional unit selection
+
 - Per FLOP is best suited for evaluating compute efficiency and incentivizes algorithmic improvements and optimized hardware utilization.
 - Per Training Token aligns with data-centric strategies and encourages deduplication, curation, and synthetic augmentation.
-- Per Parameter emphasizes compact, purposeful model designs, especially when adjusted for activation sparsity.
+- Per Billion Parameters emphasizes compact, purposeful model designs, especially when adjusted for activation sparsity.
 
-#### 8.2.2 Reporting expectations
- 
+#### Reporting expectations
+
 Providers shall clearly state:
- 
+
 - the chosen functional unit and the rationale behind its selection;
 - whether emissions are normalized using gross or effective values (see below);
 - any key strategies, assumptions, or methodologies that are either material to the reported results or potentially valuable for others to adopt (e.g., pruning, sparse activation, synthetic data use).
+
 Gross values refer to total quantities without adjustment — e.g., total parameters in the model, total tokens in a raw dataset, or total theoretical FLOPs. Effective values account for actual usage or meaningful contributions — e.g., active parameters used per inference (for sparse models), deduplicated or curated tokens, or utilized FLOPs during computation.
- 
+
 NOTE   Reporting effective values gives a more realistic picture of efficiency by recognizing carbon savings from optimizations like pruning, deduplication, or sparse activations.
- 
+
 This flexible approach allows providers to transparently highlight their optimization focus while avoiding misleading comparisons.
- 
+
 Providers may report multiple functional units where feasible, to give a comprehensive view of efficiency across compute, data, and model design dimensions.
- 
+
 EXAMPLE   An organization training a language model might report:
 - 0,45 gCO₂e per 10¹² FLOPs, reflecting gains from switching to energy-efficient hardware;
 - 0,18 gCO₂e per 1 000 training tokens, reflecting curation of the training dataset; and
 - 20 kgCO₂e per billion parameters, reflecting pruning of inactive model weights.
-  
-## 9. Implementation Examples
+
+## Implementation examples
 
 This section provides examples of how to apply the SCI for AI specification in real-world scenarios, demonstrating how to combine software boundaries and functional units to calculate meaningful SCI scores.
 
-### 9.1 Large Language Model (LLM) Example
+### Large language model (LLM) example
 
 For a typical Large Language Model service, two separate SCI scores should be calculated and reported:
- 
-#### 9.1.1 Consumer SCI calculation
- 
+
+#### Consumer SCI calculation
+
 **Functional Unit**: Per Token
- 
+
 **Boundary**: Operation and Monitoring (inference services, API infrastructure, monitoring systems)
- 
+
 **Calculation Method**:
- 
+
 1. Measure all operational carbon within the Consumer boundary over a defined period (e.g., one week):
    - Carbon emitted of inference servers
    - Carbon emitted of API gateways and load balancers
@@ -285,19 +290,19 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 5. Calculate Consumer SCI: `SCI = C / R`.
 
 EXAMPLE
-- Total Consumer operational carbon: 5,000 kg CO₂e/week
-- Total Consumer embodied carbon: 1,500 kg CO₂e/week
+- Total Consumer operational carbon: 5 000 kg CO₂e/week
+- Total Consumer embodied carbon: 1 500 kg CO₂e/week
 - Total tokens processed: 50 billion tokens/week
-- Consumer SCI = 6,500 kg CO₂e ÷ 50 billion tokens = 130 kg CO₂e/billion tokens
- 
-#### 9.1.2 Provider SCI calculation
- 
-**Functional Unit**: Per FLOP, Per Parameter, or Per Training Token (example uses Per FLOP)
- 
+- Consumer SCI = 6 500 kg CO₂e ÷ 50 billion tokens = 130 kg CO₂e/billion tokens
+
+#### Provider SCI calculation
+
+**Functional Unit**: Per FLOP, Per Billion Parameters, or Per Training Token (example uses Per FLOP)
+
 **Boundary**: Inception, Design and Development, Deployment, Retirement
- 
+
 **Calculation Method**:
- 
+
 1. Measure all operational carbon within the Provider boundary:
    - Carbon emitted during data collection and processing
    - Carbon emitted during model training
@@ -309,47 +314,47 @@ EXAMPLE
 5. Calculate Provider SCI: `SCI = C / R`.
 
 EXAMPLE
-- Total Provider operational emissions: 180,000 kg CO₂e
-- Total Provider embodied emissions: 20,000 kg CO₂e
+- Total Provider operational emissions: 180 000 kg CO₂e
+- Total Provider embodied emissions: 20 000 kg CO₂e
 - Total FLOPs used: 5 × 10²² FLOPs
-- Provider SCI = 200,000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs
- 
-#### 9.1.3 Reporting
- 
+- Provider SCI = 200 000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e/10¹⁵ FLOPs
+
+#### Reporting
+
 For an LLM the following SCI values can be reported:
- 
+
 - Consumer SCI: 130 g CO₂e/million tokens
 - Provider SCI: 4 g CO₂e/10¹⁵ FLOPs
 
-### 9.2 Computer vision model example
- 
+### Computer vision model example
+
 For a computer vision model used for image classification:
- 
-#### 9.2.1 Consumer SCI calculation
- 
+
+#### Consumer SCI calculation
+
 **Functional Unit**: Per Inference
- 
+
 **Boundary**: Operation and Monitoring
- 
+
 EXAMPLE
-- Total Consumer emissions: 3,200 kg CO₂e/month
+- Total Consumer emissions: 3 200 kg CO₂e/month
 - Total inferences: 40 million/month
-- Consumer SCI = 3,200 kg CO₂e ÷ 40 million inferences = 0.08 g CO₂e/inference
- 
-#### 9.2.2 Provider SCI calculation
- 
-**Functional Unit**: Per Parameter
- 
+- Consumer SCI = 3 200 kg CO₂e ÷ 40 million inferences = 0,08 g CO₂e/inference
+
+#### Provider SCI calculation
+
+**Functional Unit**: Per Billion Parameters
+
 **Boundary**: Inception, Design and Development, Deployment, Retirement
- 
+
 EXAMPLE
-- Total Provider emissions: 75,000 kg CO₂e
+- Total Provider emissions: 75 000 kg CO₂e
 - Total parameters: 2,5 billion
-- Provider SCI = 75,000 kg CO₂e ÷ 2.5 billion parameters = 30,000 kg CO₂e/billion parameters
-   
-#### 9.2.3 Reporting
- 
+- Provider SCI = 75 000 kg CO₂e ÷ 2,5 billion parameters = 30 000 kg CO₂e/billion parameters
+
+#### Reporting
+
 For a computer vision model the following SCI values can be reported:
- 
-- Consumer SCI: 0.08 g CO₂e/inference
-- Provider SCI: 30,000 kg CO₂e/billion parameters
+
+- Consumer SCI: 0,08 g CO₂e/inference
+- Provider SCI: 30 000 kg CO₂e/billion parameters
