@@ -24,7 +24,7 @@ The AI system types addressed by this document are grouped as follows.
   - Reinforcement Learning
   - Deep Learning
 - Symbolic AI (Classical AI)
-- Probabilistic & Bayesian AI
+- Probabilistic and Bayesian AI
 - Evolutionary Algorithms
 - Fuzzy Logic
 - Hybrid AI (combining multiple paradigms)
@@ -107,19 +107,23 @@ quantity of a metric that reflects actual usage or meaningful contribution rathe
 For the purpose of measuring carbon emissions, the AI lifecycle is divided into the following stages:
 
 ### 5.1 Inception
+ 
 The Inception stage involves defining the AI problem, assessing whether AI is the appropriate solution, engaging with end-users, and establishing performance objectives and computational constraints.
-
-### 5.2 Design and Development
+ 
+### 5.2 Design and development
+ 
 The Design and Development stage includes data collection from various sources, preprocessing (cleaning and normalizing), generating synthetic data when appropriate to reduce the need for excessive data collection, model selection, feature engineering, distributed training setup, evaluation metric definition, resource allocation, benchmarking, and computational resource optimization.
-
+ 
 ### 5.3 Deployment
+ 
 The Deployment stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
 
 ### 5.4 Operation and Monitoring
 The Runtime Operations stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in Agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, like FinOps, across edge devices, data centers, and cloud environments.
 
-### 5.5 End of Life
-The End of Life stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
+### 5.5 Retirement
+ 
+The Retirement stage involves decommissioning AI systems no longer maintained in runtime environments and properly handling associated resources and data.
 
 ## 6. Persona-based software boundary definition
  
@@ -141,6 +145,7 @@ The Consumer boundary shall include all components related to the Operation and 
 ### 6.2 Provider boundary
  
 The Provider boundary shall include all components related to the following lifecycle stages:
+
 - Inception
 - Design and Development
 - Deployment
@@ -176,7 +181,7 @@ All carbon emissions associated with systems used in the Design and Development 
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate & test runs, and early stopping phases. 
+Emissions from model training SHALL be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases. 
 
 ### 7.3 Deployment (Provider)
 
