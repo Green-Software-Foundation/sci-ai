@@ -66,7 +66,7 @@ T.1
 **functional unit**
 quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
 
-This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
+Note 1 to entry: This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
 
 T.2
 **consumer**
@@ -104,6 +104,29 @@ total quantity of a metric reported without adjustment for actual usage or contr
 T.10
 **effective value**
 quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
+
+## Symbols and abbreviated terms
+
+For the purposes of this document, the following symbols and abbreviated terms apply.
+
+| Abbreviation | Full term |
+|---|---|
+| AI | Artificial Intelligence |
+| API | Application Programming Interface |
+| CER | Certified Emission Reduction |
+| EAC | Electricity Attribute Certificate |
+| ERU | Emission Reduction Unit |
+| FLOP | Floating Point Operation |
+| LLM | Large Language Model |
+| M | Allocated embodied emissions |
+| NLP | Natural Language Processing |
+| O | Operational emissions |
+| OCR | Optical Character Recognition |
+| PPA | Power Purchase Agreement |
+| R | Functional unit |
+| REC | Renewable Energy Credit |
+| RMU | Removal Unit |
+| SCI | Software Carbon Intensity |
 
 ## AI lifecycle stages
 
@@ -383,6 +406,6 @@ Market-based measures are financial instruments designed to neutralize or offset
 
 NOTE   These exclusions apply equally to Consumer and Provider SCI calculations. For example, a provider's use of PPAs or RECs to claim clean energy sourcing for model training does not reduce the Provider SCI score; only genuine reductions in energy consumption, hardware footprint, or grid carbon intensity do.
 
-## Bibliography
+## Further reading
 
-[1] The Net-Zero STANDARD, Science Based Targets initiative (SBTi), https://sciencebasedtargets.org/net-zero
+The Net-Zero STANDARD, Science Based Targets initiative (SBTi), https://sciencebasedtargets.org/net-zero
