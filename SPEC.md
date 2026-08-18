@@ -259,9 +259,9 @@ This flexible approach allows providers to transparently highlight their optimiz
 Providers may report multiple functional units where feasible, to give a comprehensive view of efficiency across compute, data, and model design dimensions.
 
 EXAMPLE   An organization training a language model might report:
-- 0,45 gCO₂e per 10¹² FLOPs, reflecting gains from switching to energy-efficient hardware;
-- 0,18 gCO₂e per 1 000 training tokens, reflecting curation of the training dataset; and
-- 20 kgCO₂e per billion parameters, reflecting pruning of inactive model weights.
+- 0,45 g CO₂e per 10¹² FLOPs, reflecting gains from switching to energy-efficient hardware;
+- 0,18 g CO₂e per 1 000 training tokens, reflecting curation of the training dataset; and
+- 20 kg CO₂e per billion parameters, reflecting pruning of inactive model weights.
 
 ## Implementation examples
 
