@@ -323,7 +323,7 @@ EXAMPLE
 
 For an LLM the following SCI values can be reported:
 
-- Consumer SCI: 130 g CO₂e/million tokens
+- Consumer SCI: 130 kg CO₂e/billion tokens
 - Provider SCI: 4 g CO₂e/10¹⁵ FLOPs
 
 ### Computer vision model example
