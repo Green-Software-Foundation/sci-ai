@@ -66,7 +66,7 @@ T.1
 **functional unit**
 quantified performance characteristic of an AI system that serves as the reference unit for carbon intensity calculation
 
-This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
+Note 1 to entry: This definition adapts the functional unit concept (denoted R) described in the Functional Unit clause of ISO/IEC 21031:2024 for AI-specific reference units.
 
 T.2
 **consumer**
@@ -282,10 +282,10 @@ For a typical Large Language Model service, two separate SCI scores should be ca
 **Calculation Method**:
 
 1. Measure all operational carbon within the Consumer boundary over a defined period (e.g., one week):
-   - Carbon emitted of inference servers
-   - Carbon emitted of API gateways and load balancers
-   - Carbon emitted of monitoring and observability systems
-   - Carbon emitted of caching and data storage
+   - Carbon emitted by inference servers
+   - Carbon emitted by API gateways and load balancers
+   - Carbon emitted by monitoring and observability systems
+   - Carbon emitted by caching and data storage
 2. Calculate embodied carbon for all hardware within the Consumer boundary over the defined period.
 3. Sum operational and embodied emissions to get total Consumer carbon (C).
 4. Count the total number of tokens processed during the same period (R).
@@ -365,7 +365,7 @@ For a computer vision model the following SCI values can be reported:
 
 ### General
 
-The focus of this document is elimination, not offsetting. One tonne of carbon eliminated from an AI system's operation is not equivalent to one tonne of carbon that has been offset. The preferable goal is to avoid emitting the carbon in the first place, rather than compensating for it after the fact.
+The focus of this document is elimination, not offsetting. One tonne of carbon eliminated from an AI system's operation is not equivalent to one tonne of carbon that has been offset. The preferable goal is to avoid emitting the carbon in the first place, rather than compensating for it after the fact, consistent with the mitigation hierarchy set out in [1].
 
 Only actions that eliminate emissions reduce a Consumer or Provider SCI score. An SCI for AI score shall not be reduced through carbon offsets, such as market-based measures.
 
