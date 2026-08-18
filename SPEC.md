@@ -171,6 +171,10 @@ This includes:
 
 ## AI lifecycle coverage
 
+## AI lifecycle coverage
+
+Per ISO/IEC 21031:2024, an SCI score is calculated as SCI = (O + M) per R, where O is operational emissions and M is embodied emissions. This document applies that formula separately within each persona boundary: the Consumer SCI accounts for O and M arising from systems in the Operation and Monitoring stage, and the Provider SCI accounts for O and M arising from systems in the Inception, Design and Development, Deployment, and Retirement stages. The subsections below specify, stage by stage, which emissions are mandatory (shall) or conditional on materiality (may) within each boundary.
+
 ### Inception (Provider)
 
 Systems used in the Inception stage shall be included in the Provider SCI calculation when material; they may be included when not material.
@@ -222,7 +226,7 @@ Table 1 provides suggested examples of commonly used functional units. Given the
 | Speech Recognition | Per Second of Audio Processed |
 | Text-to-Speech | Per Character of Text Processed |
 
-NOTE   Where an AI service involves multiple model calls, tool invocations, or service integrations, emissions should account for all triggered operations — including model executions, tool usage, retrieval steps, model-to-model exchanges, and any other impacts considered material.
+NOTE   Where an AI service involves multiple model calls, tool invocations, or service integrations, this can include model executions, tool usage, retrieval steps, model-to-model exchanges, and any other operations considered material.
 
 ### Provider functional units
 
@@ -358,3 +362,29 @@ For a computer vision model the following SCI values can be reported:
 
 - Consumer SCI: 0,08 g CO₂e/inference
 - Provider SCI: 30 000 kg CO₂e/billion parameters
+
+## Exclusions
+
+### General
+
+The focus of this document is elimination, not offsetting. One tonne of carbon eliminated from an AI system's operation is not equivalent to one tonne of carbon that has been offset. The preferable goal is to avoid emitting the carbon in the first place, rather than compensating for it after the fact.
+
+Only actions that eliminate emissions reduce a Consumer or Provider SCI score. An SCI for AI score shall not be reduced through carbon offsets, such as market-based measures.
+
+### Market-based measures
+
+Market-based measures are financial instruments designed to neutralize or offset carbon emissions. Market-based measures include, but are not limited to, the following:
+
+- carbon offsets or credits;
+- a Removal Unit (RMU);
+- an Emission Reduction Unit (ERU);
+- a Certified Emission Reduction (CER);
+- Electricity Attribute Certificates (EACs);
+- Power Purchase Agreements (PPAs);
+- Renewable Energy Credits (RECs).
+
+NOTE   These exclusions apply equally to Consumer and Provider SCI calculations. For example, a provider's use of PPAs or RECs to claim clean energy sourcing for model training does not reduce the Provider SCI score; only genuine reductions in energy consumption, hardware footprint, or grid carbon intensity do.
+
+## Bibliography
+
+[1] The Net-Zero STANDARD, Science Based Targets initiative (SBTi), https://sciencebasedtargets.org/net-zero
