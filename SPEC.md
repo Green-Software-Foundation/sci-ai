@@ -171,8 +171,6 @@ This includes:
 
 ## AI lifecycle coverage
 
-## AI lifecycle coverage
-
 Per ISO/IEC 21031:2024, an SCI score is calculated as SCI = (O + M) per R, where O is operational emissions and M is embodied emissions. This document applies that formula separately within each persona boundary: the Consumer SCI accounts for O and M arising from systems in the Operation and Monitoring stage, and the Provider SCI accounts for O and M arising from systems in the Inception, Design and Development, Deployment, and Retirement stages. The subsections below specify, stage by stage, which emissions are mandatory (shall) or conditional on materiality (may) within each boundary.
 
 ### Inception (Provider)
