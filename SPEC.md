@@ -186,7 +186,7 @@ All carbon emissions associated with systems used in the Design and Development 
 - Model selection and benchmarking systems
 - Evaluation frameworks
 
-Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, and early stopping phases.
+Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, early stopping phases, failed or aborted training runs, hyperparameter tuning and search sweeps, and discarded or superseded model checkpoints.
 
 ### Deployment (Provider)
 
