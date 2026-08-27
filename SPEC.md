@@ -44,6 +44,9 @@ The AI system types addressed by this document are grouped as follows.
   - Music Generation
   - Code Generation
 - Agentic AI (Autonomous Decision-Making)
+  - Planning & Reasoning
+  - Tool Use, Orchestration & API Integration
+  - World Models (Environment Simulation & Planning)
 
 ## Normative references
 
