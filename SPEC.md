@@ -135,7 +135,7 @@ For the purposes of this document, the following symbols and abbreviated terms a
 | API | application programming interface |
 | CER | Certified Emission Reduction |
 | CO₂e | carbon dioxide equivalent |
-| EAC | Electricity Attribute Certificate |
+| EAC | electricity attribute certificate |
 | ERU | Emission Reduction Unit |
 | FinOps | financial operations |
 | FLOP | floating-point operation |
@@ -143,8 +143,8 @@ For the purposes of this document, the following symbols and abbreviated terms a
 | ML | machine learning |
 | NLP | natural language processing |
 | OCR | optical character recognition |
-| PPA | Power Purchase Agreement |
-| REC | Renewable Energy Credit |
+| PPA | power purchase agreement |
+| REC | renewable energy credit |
 | RMU | Removal Unit |
 | SBTi | Science Based Targets initiative |
 | SCI | Software Carbon Intensity |
@@ -168,7 +168,7 @@ The deployment stage involves incorporating the AI model into larger systems, de
 
 ### Operation and monitoring
 
-The operation and monitoring stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g., in agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, such as FinOps, across edge devices, data centers, and cloud environments.
+The operation and monitoring stage includes model deployment for inference, orchestration of autonomous workflows and models (e.g. in agentic AI), integration of model tools and services, monitoring performance metrics, implementing maintenance protocols, and applying practices, such as FinOps, across edge devices, data centres, and cloud environments.
 
 ### Retirement
 
@@ -180,20 +180,20 @@ This document defines software boundaries based on two personas, SCI consumer an
 
 ### Consumer boundary
 
-The Consumer boundary shall include all components related to the operation and monitoring stage, including but not limited to:
+The consumer boundary shall include all components related to the operation and monitoring stage, including but not limited to:
 
 - API and inference
 - Orchestration
 - Scaling
 - Observability and monitoring
 - Data and feature management
-- Storage and artifacts
+- Storage and artefacts
 - UX and client-side
 - Model tool and service connectors
 
 ### Provider boundary
 
-The Provider boundary shall include all components related to the following life cycle stages:
+The provider boundary shall include all components related to the following life cycle stages:
 
 - Inception
 - Design and development
@@ -236,15 +236,15 @@ and
 - I is the region-specific carbon intensity;
 - R is the functional unit.
 
-This document applies the SCI methodology separately within the Consumer and Provider boundaries, accounting for O and M arising from systems and activities attributable to each persona across the applicable AI system life cycle stages. The following subclauses specify, stage by stage, which emissions are included within each persona boundary and whether their inclusion is mandatory or conditional.
+This document applies the SCI methodology separately within the consumer and provider boundaries, accounting for O and M arising from systems and activities attributable to each persona across the applicable AI system life cycle stages. The following subclauses specify, stage by stage, which emissions are included within each persona boundary and whether their inclusion is mandatory or conditional.
 
-### Inception (Provider)
+### Inception (provider)
 
-Systems used in the inception stage shall be included in the Provider SCI calculation when material; they may be included when not material.
+Systems used in the inception stage shall be included in the provider SCI calculation when material; they may be included when not material.
 
-### Design and development (Provider)
+### Design and development (provider)
 
-All carbon emissions associated with systems used in the design and development stage shall be included in the Provider SCI calculation, including:
+All carbon emissions associated with systems used in the design and development stage shall be included in the provider SCI calculation, including:
 
 - Data collection, preprocessing, and cleaning systems
 - Synthetic data generation
@@ -255,15 +255,15 @@ All carbon emissions associated with systems used in the design and development 
 
 Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, early stopping phases, failed or aborted training runs, hyperparameter tuning and search sweeps, and discarded or superseded model checkpoints.
 
-### Deployment (Provider)
+### Deployment (provider)
 
-All carbon emissions associated with systems used in the deployment stage shall be included in the Provider SCI calculation.
+All carbon emissions associated with systems used in the deployment stage shall be included in the provider SCI calculation.
 
-### Operation and monitoring (Consumer)
+### Operation and monitoring (consumer)
 
-All carbon emissions associated with systems used in the operation and monitoring stage shall be included in the Consumer SCI calculation.
+All carbon emissions associated with systems used in the operation and monitoring stage shall be included in the consumer SCI calculation.
 
-### Retirement (Consumer and Provider)
+### Retirement (consumer and provider)
 
 Systems used in the retirement stage shall be included in the SCI calculation when material; they may be included when not material.
 
@@ -271,7 +271,7 @@ Systems used in the retirement stage shall be included in the SCI calculation wh
 
 ### Consumer functional units
 
-Consumer functional units represent the measurable unit of AI service consumption used to normalize carbon emissions within the Consumer boundary. The functional unit should align with how the AI service is delivered, consumed, or billed.
+Consumer functional units represent the measurable unit of AI service consumption used to normalize carbon emissions within the consumer boundary. The functional unit should align with how the AI service is delivered, consumed, or billed.
 
 Table 1 provides suggested examples of commonly used functional units. Given the diversity of AI system types and consumption models, these examples are indicative and not exhaustive.
 
@@ -284,7 +284,7 @@ Table 1 provides suggested examples of commonly used functional units. Given the
 | Image generation | Per image |
 | Agentic AI | Per workflow execution |
 | OCR/document analysis | Per page processed |
-| Classical machine learning (e.g., classification) | Per inference |
+| Classical machine learning (e.g. classification) | Per inference |
 | Machine translation | Per character translated |
 | Speech recognition | Per second of audio processed |
 | Text-to-speech | Per character of text processed |
@@ -309,7 +309,7 @@ SCI providers shall state:
 
 - the chosen functional unit and the rationale for its selection;
 - whether emissions are normalized using gross values (T.12) or effective values (T.13);
-- any strategies, assumptions, or methodologies that are material to the reported results (e.g., pruning, sparse activation, synthetic data use).
+- any strategies, assumptions, or methodologies that are material to the reported results (e.g. pruning, sparse activation, synthetic data use).
 
 SCI providers should also state any strategies, assumptions, or methodologies that are potentially valuable for others to adopt.
 
@@ -330,7 +330,7 @@ EXAMPLE   An organization training a language model might report:
 
 The focus of this document is elimination, not offsetting. One tonne of carbon eliminated from an AI system's operation is not equivalent to one tonne of carbon that has been offset. The preferable goal is to avoid emitting the carbon in the first place, rather than compensating for it after the fact, consistent with the mitigation hierarchy set out in [1].
 
-Only actions that eliminate emissions reduce a Consumer or Provider SCI score. An SCI for AI score shall not be reduced through carbon offsets, such as market-based measures.
+Only actions that eliminate emissions reduce a consumer or provider SCI score. An SCI for AI score shall not be reduced through carbon offsets, such as market-based measures.
 
 ### Market-based measures
 
@@ -340,11 +340,11 @@ Market-based measures (T.15) include, but are not limited to, the following:
 - a Removal Unit (RMU);
 - an Emission Reduction Unit (ERU);
 - a Certified Emission Reduction (CER);
-- Electricity Attribute Certificates (EACs);
-- Power Purchase Agreements (PPAs);
-- Renewable Energy Credits (RECs).
+- electricity attribute certificates (EACs);
+- power purchase agreements (PPAs);
+- renewable energy credits (RECs).
 
-NOTE   These exclusions apply equally to Consumer and Provider SCI calculations. For example, an SCI provider's use of PPAs or RECs to claim clean energy sourcing for model training does not reduce the Provider SCI score; only genuine reductions in energy consumption, hardware footprint, or grid carbon intensity do.
+NOTE   These exclusions apply equally to consumer and provider SCI calculations. For example, an SCI provider's use of PPAs or RECs to claim clean energy sourcing for model training does not reduce the provider SCI score; only genuine reductions in energy consumption, hardware footprint, or grid carbon intensity do.
 
 ## Annex A (informative) AI system types
 
@@ -371,7 +371,7 @@ The AI system types addressed by this document are grouped as follows. The group
 
 ### A.3 Emerging AI technologies
 - Generative AI
-  - Text generation (e.g., LLMs)
+  - Text generation (e.g. LLMs)
   - Image generation
   - Video generation
   - Music generation
@@ -402,19 +402,19 @@ For a typical large language model service, two separate SCI scores can be calcu
 
 **Calculation method**:
 
-1. Measure all operational emissions (O) within the Consumer boundary over a defined period (e.g., one week):
+1. Measure all operational emissions (O) within the consumer boundary over a defined period (e.g. one week):
    - Carbon emitted by inference servers
    - Carbon emitted by API gateways and load balancers
    - Carbon emitted by monitoring and observability systems
    - Carbon emitted by caching and data storage
-2. Calculate embodied emissions (M) for all hardware within the Consumer boundary over the defined period.
-3. Sum operational and embodied emissions to obtain total Consumer carbon emissions (C), using Formula (2).
+2. Calculate embodied emissions (M) for all hardware within the consumer boundary over the defined period.
+3. Sum operational and embodied emissions to obtain total consumer carbon emissions (C), using Formula (2).
 4. Count the total number of tokens processed during the same period (R).
-5. Calculate the Consumer SCI using Formula (1).
+5. Calculate the consumer SCI using Formula (1).
 
 EXAMPLE
-- Total Consumer operational emissions: 5 000 kg CO₂e/week
-- Total Consumer embodied emissions: 1 500 kg CO₂e/week
+- Total consumer operational emissions: 5 000 kg CO₂e/week
+- Total consumer embodied emissions: 1 500 kg CO₂e/week
 - Total tokens processed: 50 × 10⁹ tokens/week
 - Consumer SCI = 6 500 kg CO₂e ÷ (50 × 10⁹ tokens) = 130 kg CO₂e per 10⁹ tokens
 
@@ -426,19 +426,19 @@ EXAMPLE
 
 **Calculation method**:
 
-1. Measure all operational emissions (O) within the Provider boundary:
+1. Measure all operational emissions (O) within the provider boundary:
    - Carbon emitted during data collection and processing
    - Carbon emitted during model training
    - Carbon emitted during model optimization and testing
    - Carbon emitted during system integration
-2. Calculate embodied emissions (M) for all hardware within the Provider boundary.
-3. Sum operational and embodied emissions to obtain total Provider carbon emissions (C), using Formula (2).
+2. Calculate embodied emissions (M) for all hardware within the provider boundary.
+3. Sum operational and embodied emissions to obtain total provider carbon emissions (C), using Formula (2).
 4. Calculate the total number of FLOPs used (R).
-5. Calculate the Provider SCI using Formula (1).
+5. Calculate the provider SCI using Formula (1).
 
 EXAMPLE
-- Total Provider operational emissions: 180 000 kg CO₂e
-- Total Provider embodied emissions: 20 000 kg CO₂e
+- Total provider operational emissions: 180 000 kg CO₂e
+- Total provider embodied emissions: 20 000 kg CO₂e
 - Total FLOPs used: 5 × 10²² FLOPs
 - Provider SCI = 200 000 kg CO₂e ÷ (5 × 10²² FLOPs) = 4 × 10⁻¹⁸ kg CO₂e/FLOP = 4 g CO₂e per 10¹⁵ FLOPs
 
@@ -460,7 +460,7 @@ For a computer vision model used for image classification:
 **Boundary**: Operation and monitoring
 
 EXAMPLE
-- Total Consumer emissions: 3 200 kg CO₂e/month
+- Total consumer emissions: 3 200 kg CO₂e/month
 - Total inferences: 40 × 10⁶ per month
 - Consumer SCI = 3 200 kg CO₂e ÷ (40 × 10⁶ inferences) = 0,08 g CO₂e/inference
 
@@ -471,7 +471,7 @@ EXAMPLE
 **Boundary**: Inception, design and development, deployment, retirement
 
 EXAMPLE
-- Total Provider emissions: 75 000 kg CO₂e
+- Total provider emissions: 75 000 kg CO₂e
 - Total parameters: 2,5 × 10⁹
 - Provider SCI = 75 000 kg CO₂e ÷ (2,5 × 10⁹ parameters) = 30 000 kg CO₂e per 10⁹ parameters
 
