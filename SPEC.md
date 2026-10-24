@@ -15,7 +15,7 @@ This document is intended to:
 
 This document specifies a method for measuring, calculating and reporting the carbon intensity of artificial intelligence (AI) systems, as an extension of ISO/IEC 21031:2024. It specifies AI system life cycle stages, persona-based software boundaries for SCI consumers and SCI providers, and the functional units applicable to each persona.
 
-This document is applicable to a broad range of AI system types, including classical machine learning, generative AI and agentic AI. Annex A lists the AI system types addressed.
+This document is applicable to a broad range of AI system types, including classical machine learning, generative AI and agentic AI. Annex A lists the AI system types addressed. For AI systems that do not include a trained model, this document specifies the consumer SCI only.
 
 This document does not specify:
 
@@ -292,6 +292,8 @@ Table 1 provides suggested examples of commonly used functional units. Given the
 NOTE   For an AI service that involves multiple model calls, tool invocations or service integrations, a single functional unit can encompass model executions, tool usage, retrieval steps, model-to-model exchanges and other operations performed to deliver that unit.
 
 ### Provider functional units
+
+Provider functional units apply only to AI systems that include a trained model. For AI systems that do not include a trained model, this document does not specify a provider SCI score.
 
 Provider functional units shall be one of the metrics shown in Table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the SCI provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies. Guidance on selecting a provider functional unit is given in Annex B.
 
