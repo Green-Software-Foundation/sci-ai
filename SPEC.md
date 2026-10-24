@@ -77,6 +77,8 @@ T.8
 **material**
 <emission source> of a magnitude such that its omission could change the reported SCI score to an extent that could influence decisions based on that score
 
+Note 1 to entry: The threshold below which an emission source may be treated as not material is specified in the Materiality subclause.
+
 T.9
 **inference**
 process of using a trained AI model to make predictions or generate outputs based on input data
@@ -266,6 +268,12 @@ All carbon emissions associated with systems used in the operation and monitorin
 ### Retirement (consumer and provider)
 
 Systems used in the retirement stage shall be included in the SCI calculation when material; they may be included when not material.
+
+### Materiality
+
+This subclause applies only where this document permits the exclusion of emission sources that are not material. An emission source may be treated as not material if its estimated emissions are less than 1 % of the total estimated emissions within the software boundary, including the estimated emissions of all sources treated as not material, provided that the combined estimated emissions of all sources so treated do not exceed 5 % of that total. The test shall be applied separately to the consumer boundary and the provider boundary.
+
+Emission sources treated as not material shall be reported, together with their estimated emissions and the method used to estimate them.
 
 ## Functional units
 
