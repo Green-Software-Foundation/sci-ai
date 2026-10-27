@@ -77,7 +77,7 @@ T.8
 **material**
 <emission source> of a magnitude such that its omission could change the reported SCI score to an extent that could influence decisions based on that score
 
-Note 1 to entry: The threshold below which an emission source may be treated as not material is specified in the Materiality subclause.
+Note 1 to entry: Criteria for assessing materiality are specified in the Materiality subclause.
 
 T.9
 **inference**
@@ -271,9 +271,13 @@ Systems used in the retirement stage shall be included in the SCI calculation wh
 
 ### Materiality
 
-This subclause applies only where this document permits the exclusion of emission sources that are not material. An emission source may be treated as not material if its estimated emissions are less than 1 % of the total estimated emissions within the software boundary, including the estimated emissions of all sources treated as not material, provided that the combined estimated emissions of all sources so treated do not exceed 5 % of that total. The test shall be applied separately to the consumer boundary and the provider boundary.
+This subclause applies only where this document permits the exclusion of emission sources that are not material.
 
-Emission sources treated as not material shall be reported, together with their estimated emissions and the method used to estimate them.
+An emission source may be excluded when its omission would not change the reported SCI score to an extent that could influence decisions based on that score. The materiality assessment shall consider the estimated contribution of individual emission sources and the cumulative impact of all excluded sources within the applicable software boundary. The assessment shall be applied separately to the consumer and provider boundaries.
+
+The criteria used to assess materiality, including any quantitative thresholds applied, shall be reported. Emission sources excluded as not material shall be reported, together with their estimated emissions, the method used to estimate them, and the justification for their exclusion.
+
+NOTE   An example of quantitative criteria is a per-source threshold of 1 % of the total estimated emissions within the software boundary, with the combined emissions of all excluded sources not exceeding 5 % of that total.
 
 ## Functional units
 
