@@ -78,12 +78,22 @@ T.8
 <emission source> of a magnitude such that its omission could change the reported SCI score to an extent that could influence decisions based on that score
 
 T.9
+**inference**
+reasoning by which conclusions are derived from known premises
+
+Note 1 to entry: In AI, a premise is either a fact, a rule, a model, a feature or raw data.
+
+Note 2 to entry: The term "inference" refers both to the process and its result.
+
+[SOURCE: ISO/IEC 22989:2022, 3.1.17]
+
+T.10
 **token**
 unit into which input or output data is segmented for processing by an AI model
 
 Note 1 to entry: In language models, a token commonly represents a word, part of a word or a character. In models that process other modalities, a token can represent, for example, an image patch or a segment of audio.
 
-T.10
+T.11
 **floating-point operation**
 **FLOP**
 single arithmetic operation, such as an addition or a multiplication, performed on floating-point numbers
@@ -92,19 +102,19 @@ Note 1 to entry: "FLOPs" denotes a count of floating-point operations and is dis
 
 Note 2 to entry: The number of FLOPs for a given workload can vary with the numeric precision used.
 
-T.11
+T.12
 **gross value**
 total quantity of a metric reported without adjustment for actual usage or contribution
 
-T.12
+T.13
 **effective value**
 quantity of a metric that reflects actual usage or meaningful contribution rather than an unadjusted total
 
-T.13
+T.14
 **agentic AI**
 AI system that autonomously plans and executes sequences of actions, which can include invoking tools, services or other AI models, to achieve specified goals
 
-T.14
+T.15
 **market-based measure**
 financial instrument intended to neutralize, offset or reallocate carbon emissions
 
@@ -304,7 +314,7 @@ Provider functional units shall be one of the metrics shown in Table 2, to norma
 SCI providers shall state:
 
 - the chosen functional unit and the rationale for its selection;
-- whether emissions are normalized using gross values (T.11) or effective values (T.12);
+- whether emissions are normalized using gross values (T.12) or effective values (T.13);
 - any strategies, assumptions, or methodologies that are material to the reported results (e.g. pruning, sparse activation, synthetic data use).
 
 SCI providers should also state any strategies, assumptions, or methodologies that are potentially valuable for others to adopt.
@@ -330,7 +340,7 @@ Only actions that eliminate emissions reduce a consumer or provider SCI score. A
 
 ### Market-based measures
 
-Market-based measures (T.14) include, but are not limited to, the following:
+Market-based measures (T.15) include, but are not limited to, the following:
 
 - carbon offsets or credits;
 - a Removal Unit (RMU);
