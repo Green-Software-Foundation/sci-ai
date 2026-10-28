@@ -81,7 +81,13 @@ Note 1 to entry: Criteria for assessing materiality are specified in the Materia
 
 T.9
 **inference**
-process of using a trained AI model to make predictions or generate outputs based on input data
+reasoning by which conclusions are derived from known premises
+
+Note 1 to entry: In AI, a premise is either a fact, a rule, a model, a feature or raw data.
+
+Note 2 to entry: The term "inference" refers both to the process and its result.
+
+[SOURCE: ISO/IEC 22989:2022, 3.1.17]
 
 T.10
 **token**
