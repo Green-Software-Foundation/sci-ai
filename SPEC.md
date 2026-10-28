@@ -77,6 +77,8 @@ T.8
 **material**
 <emission source> of a magnitude such that its omission could change the reported SCI score to an extent that could influence decisions based on that score
 
+Note 1 to entry: Criteria for assessing materiality are specified in the Materiality subclause.
+
 T.9
 **inference**
 process of using a trained AI model to make predictions or generate outputs based on input data
@@ -266,6 +268,16 @@ All carbon emissions associated with systems used in the operation and monitorin
 ### Retirement (consumer and provider)
 
 Systems used in the retirement stage shall be included in the SCI calculation when material; they may be included when not material.
+
+### Materiality
+
+This subclause applies only where this document permits the exclusion of emission sources that are not material.
+
+An emission source may be excluded when its omission would not change the reported SCI score to an extent that could influence decisions based on that score. The materiality assessment shall consider the estimated contribution of individual emission sources and the cumulative impact of all excluded sources within the applicable software boundary. The assessment shall be applied separately to the consumer and provider boundaries.
+
+The criteria used to assess materiality, including any quantitative thresholds applied, shall be reported. Emission sources excluded as not material shall be reported, together with their estimated emissions, the method used to estimate them, and the justification for their exclusion.
+
+NOTE   An example of quantitative criteria is a per-source threshold of 1 % of the total estimated emissions within the software boundary, with the combined emissions of all excluded sources not exceeding 5 % of that total.
 
 ## Functional units
 
