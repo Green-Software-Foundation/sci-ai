@@ -89,8 +89,8 @@ If a single metric tried to combine everything, it would dilute accountability a
 
 The lifecycle stages are assigned to personas based on their typical control and agency:
 
-- **Consumer & Providers** (companies that build AI systems) control the emissions from Inception, Design and Development, Deployment, and Retirement stages.
-- **Consumers** (organizations and individuals who use AI systems) control the emissions from Operation and Monitoring.
+- **Providers** (entities that develop, train, fine-tune, retrain, deploy or retire AI models) control the emissions from Inception, Design and Development, validating, packaging and releasing the model in the Deployment stage, and retiring model-related assets.
+- **Consumers** (entities that integrate AI models into AI systems, or use AI systems) control the emissions from integrating the released model into an AI system in the Deployment stage, from Operation and Monitoring, and from retiring operational AI system components.
 
 This alignment ensures that each persona's SCI score reflects only the emissions they can reasonably influence or control.
 

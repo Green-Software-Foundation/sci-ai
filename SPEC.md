@@ -451,7 +451,7 @@ EXAMPLE
    - Carbon emitted during data collection and processing
    - Carbon emitted during model training
    - Carbon emitted during model optimization and testing
-   - Carbon emitted during system integration
+   - Carbon emitted during model packaging and deployment preparation
 2. Calculate embodied emissions (M) for all hardware within the provider boundary.
 3. Sum operational and embodied emissions to obtain total provider carbon emissions (C), using Formula (2).
 4. Calculate the total number of FLOPs used (R).
