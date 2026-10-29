@@ -15,7 +15,7 @@ This document is intended to:
 
 This document specifies a method for measuring, calculating and reporting the carbon intensity of artificial intelligence (AI) systems, as an extension of ISO/IEC 21031:2024. It specifies AI system life cycle stages, persona-based software boundaries for SCI consumers and SCI providers, and the functional units applicable to each persona.
 
-This document is applicable to a broad range of AI system types, including classical machine learning, generative AI and agentic AI. Annex A lists the AI system types addressed.
+This document is applicable to a broad range of AI system types, including classical machine learning, generative AI and agentic AI. Annex A lists the AI system types addressed. For AI systems that do not include a trained model, this document specifies the consumer SCI only.
 
 This document does not specify:
 
@@ -47,11 +47,11 @@ Note 1 to entry: This definition adapts the functional unit (R) specified in ISO
 
 T.2
 **SCI consumer**
-entity that uses an AI system during its operation and monitoring stage
+entity that integrates an AI model into an AI system, or uses an AI system during its operation and monitoring stage
 
 T.3
 **SCI provider**
-entity that conceives, develops, deploys or retires an AI system
+entity that develops, trains, fine-tunes, retrains, deploys or retires an AI model
 
 Note 1 to entry: An entity can act as both an SCI consumer and an SCI provider.
 
@@ -172,7 +172,7 @@ The design and development stage includes data collection from various sources, 
 
 ### Deployment
 
-The deployment stage involves incorporating the AI model into larger systems, designing component interactions, connecting with external applications, and testing for integration errors before deployment.
+The deployment stage includes validating, packaging and releasing an AI model, and integrating the released model into an AI system, including integration and deployment testing.
 
 ### Operation and monitoring
 
@@ -188,7 +188,7 @@ This document defines software boundaries based on two personas, SCI consumer an
 
 ### Consumer boundary
 
-The consumer boundary shall include all components related to the operation and monitoring stage, including but not limited to:
+The consumer boundary shall include all components related to the operation and monitoring stage, and to the integration of an AI model into an AI system during the deployment stage, including but not limited to:
 
 - API and inference
 - Orchestration
@@ -198,10 +198,11 @@ The consumer boundary shall include all components related to the operation and 
 - Storage and artefacts
 - UX and client-side
 - Model tool and service connectors
+- System integration and integration testing
 
 ### Provider boundary
 
-The provider boundary shall include all components related to the following life cycle stages:
+The provider boundary shall include components and supporting infrastructure associated with AI model development, including training, fine-tuning, retraining and related activities, across the following life cycle stages:
 
 - Inception
 - Design and development
@@ -209,18 +210,18 @@ The provider boundary shall include all components related to the following life
 - Retirement
 
 This includes:
-- Project scoping and planning systems
+- Model scoping and planning systems
 - Data collection systems
 - Data preprocessing and cleaning systems
 - Synthetic data generation
-- Model development and training infrastructure
+- Model development, training, fine-tuning and retraining infrastructure
 - Feature engineering systems
 - Distributed training systems
 - Model evaluation and benchmarking
-- Optimization and efficiency analysis
-- System integration and orchestration
-- Testing and validation systems
-- Model tool systems
+- Model optimization and efficiency analysis
+- Model testing and validation systems
+- Model packaging and deployment preparation
+- Model retirement and associated resource management
 
 ## AI system life cycle coverage
 
@@ -263,9 +264,9 @@ All carbon emissions associated with systems used in the design and development 
 
 Emissions from model training shall be calculated over the entire training duration, including but not limited to, accounting for all epochs, steps, parameter updates, intermediate and test runs, early stopping phases, failed or aborted training runs, hyperparameter tuning and search sweeps, and discarded or superseded model checkpoints.
 
-### Deployment (provider)
+### Deployment (provider and consumer)
 
-All carbon emissions associated with systems used in the deployment stage shall be included in the provider SCI calculation.
+All carbon emissions associated with validating, packaging and releasing an AI model shall be included in the provider SCI calculation. All carbon emissions associated with integrating the released model into an AI system, including integration testing, shall be included in the consumer SCI calculation.
 
 ### Operation and monitoring (consumer)
 
@@ -273,7 +274,7 @@ All carbon emissions associated with systems used in the operation and monitorin
 
 ### Retirement (consumer and provider)
 
-Systems used in the retirement stage shall be included in the SCI calculation when material; they may be included when not material.
+Systems used in the retirement stage shall be included in the SCI calculation when material; they may be included when not material. For SCI providers, retirement covers model-related assets and activities. For SCI consumers, retirement covers operational AI system components and associated resources.
 
 ### Materiality
 
@@ -311,7 +312,9 @@ NOTE   For an AI service that involves multiple model calls, tool invocations or
 
 ### Provider functional units
 
-Provider functional units shall be one of the metrics shown in Table 2, to normalize carbon emissions during AI model training. The choice of unit should reflect the primary optimization focus of the SCI provider's system design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies. Guidance on selecting a provider functional unit is given in Annex B.
+Provider functional units apply only to AI systems that include a trained model. For AI systems that do not include a trained model, this document does not specify a provider SCI score.
+
+Table 2 lists representative provider functional units; it is not exhaustive. SCI providers shall use a functional unit from Table 2 or another functional unit that is clearly defined and measurable. Where another functional unit is used, its definition and calculation method shall be reported. The choice of functional unit should reflect the primary optimization focus of the SCI provider's model design, training strategy, or architecture. Each unit supports different efficiency objectives and carbon reduction strategies. Guidance on selecting a provider functional unit is given in Annex B.
 
 **Table 2 — Provider functional units and efficiency focus**
 
@@ -448,7 +451,7 @@ EXAMPLE
    - Carbon emitted during data collection and processing
    - Carbon emitted during model training
    - Carbon emitted during model optimization and testing
-   - Carbon emitted during system integration
+   - Carbon emitted during model packaging and deployment preparation
 2. Calculate embodied emissions (M) for all hardware within the provider boundary.
 3. Sum operational and embodied emissions to obtain total provider carbon emissions (C), using Formula (2).
 4. Calculate the total number of FLOPs used (R).
